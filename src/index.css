@@ -268,3 +268,20 @@ h6 {
 
 
 }
+
+
+
+.partners {
+  background-color: #f1c30c44;
+  .container-space {
+    display: flex;
+    
+  }
+
+  .partners-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+  }
+}
