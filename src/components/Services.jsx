@@ -13,7 +13,7 @@ function Services() {
             <div className="top-text-small">
               <h3>Specialized Storage for Every Special Item</h3>
               <p>
-                {" "}
+                
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
                 molestie nisl sed dui lacinia gravida. Nulla quis nulla leo.
                 Mauris ac blandit nisi non sodales augue. Phasellus eget elit

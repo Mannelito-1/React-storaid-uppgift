@@ -175,7 +175,10 @@ h6 {
   .nav-menu {
     display: flex;
     gap: 2rem;
+    padding-bottom: 1rem;
+   align-items: center;
   }
+  
 }
 
 .hero {
