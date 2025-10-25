@@ -176,9 +176,8 @@ h6 {
     display: flex;
     gap: 2rem;
     padding-bottom: 1rem;
-   align-items: center;
+    align-items: center;
   }
-  
 }
 
 .hero {
@@ -275,7 +274,7 @@ h6 {
 }
 
 .partners {
-  background-color: #f1c30c44;
+  background-color: #faf8ec;
   .container-space {
     display: flex;
     justify-content: space-around;
