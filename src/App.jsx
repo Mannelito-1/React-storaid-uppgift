@@ -4,6 +4,7 @@ import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import AboutUs from './components/AboutUs'
 import LogosSection from './components/LogosSection'
+import Footer from './components/Footer'
 
 function App() {
   return (
@@ -19,7 +20,7 @@ function App() {
     <LogosSection/>
     
     
-    
+    <Footer/>
     </>
   )
 }
