@@ -6,6 +6,7 @@ import AboutUs from './components/AboutUs'
 import LogosSection from './components/LogosSection'
 import Footer from './components/Footer'
 import Services from './components/Services'
+import ChooseUs from './components/ChooseUs'
 
 function App() {
   return (
@@ -21,6 +22,8 @@ function App() {
     <LogosSection/>
 
     <Services/>
+
+    <ChooseUs/>
     
     
     <Footer/>
