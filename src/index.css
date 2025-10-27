@@ -392,6 +392,64 @@ h6 {
   }
 }
 
+
+
+.pricing {
+  padding-block:var(--section-spacing) ;
+  background-color: white;
+
+  .top-text {
+    padding-bottom: 2rem;
+  }
+  
+  .container-space {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .pricingCard{
+    background-color: var(--clr-light-yellow);
+    display: flex;
+    flex-direction:column ;
+    justify-content: center;
+    align-items: center;
+    padding-top: 2rem;
+    width: 20rem;
+    
+  }
+
+  .priceNumber {
+    display: flex;
+    padding-top: 1.2rem;
+  }
+
+  .line {
+    padding-top: 2rem;
+  }
+
+  .priceP{
+    display: flex;
+    gap: 2rem;
+    padding-top: 1rem;
+    
+  }
+
+  .checkmark {
+    display: flex;
+    background-color: var(--clr-dark-green);
+    color: white;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .pricing-btn {
+    padding-top: 2rem;
+  }
+}
+
 .booknow {
   padding-block: var(--section-spacing);
   background-color: var(--clr-dark-green);
@@ -413,7 +471,7 @@ h6 {
     color: white;
   }
   .booknow-btn {
-    padding-top: 2rem;
+    padding-top: 1rem;
   }
 }
 

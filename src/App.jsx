@@ -8,6 +8,7 @@ import Footer from './components/Footer'
 import Services from './components/Services'
 import ChooseUs from './components/ChooseUs'
 import BookNow from './components/BookNow'
+import Pricing from './components/Pricing'
 
 function App() {
   return (
@@ -25,6 +26,8 @@ function App() {
     <Services/>
 
     <ChooseUs/>
+    
+    <Pricing/>
 
     <BookNow/>
     
