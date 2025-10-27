@@ -1,4 +1,5 @@
 import React from "react";
+import Btn from "./Btn";
 
 function BookNow() {
   return (
@@ -16,6 +17,9 @@ function BookNow() {
               Mauris ac blandit nisi non sodales augue. Phasellus eget elit
               gravida.
             </p>
+          </div>
+          <div className="booknow-btn">
+            <Btn btnText="Book Now"/>
           </div>
         </div>
       </section>

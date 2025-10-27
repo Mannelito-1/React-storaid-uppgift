@@ -8,7 +8,6 @@
   --hover-btn-bg: #ececec62;
   --clr-light-yellow: #faf8ec;
 
-
   --section-spacing: 4rem;
 }
 
@@ -65,7 +64,6 @@ h6 {
 .container-space {
   width: 100%;
   margin-inline: auto;
-  
 
   @media (width > 576px) {
     max-width: 540px;
@@ -86,7 +84,6 @@ h6 {
   @media (width > 1400px) {
     max-width: 1350px;
   }
-  
 }
 .text-lg {
   color: var(--clr-dark-green);
@@ -196,7 +193,7 @@ h6 {
 
 .hero {
   background-color: var(--clr-light-green);
-  
+
   .container-space {
     position: relative;
     display: flex;
@@ -244,7 +241,6 @@ h6 {
   .container-space {
     display: flex;
     gap: 2rem;
-    
   }
 
   .img-bar {
@@ -295,7 +291,6 @@ h6 {
   .container-space {
     display: flex;
     justify-content: space-around;
-    
   }
 
   .partners-logo {
@@ -308,11 +303,9 @@ h6 {
 
 .services {
   padding-block: var(--section-spacing);
-  
-  
+
   .container-space {
     display: flex;
-    
   }
 
   .top-text-small {
@@ -372,8 +365,6 @@ h6 {
   padding-block: var(--section-spacing);
   .container-space {
     display: flex;
-    
-    
   }
 
   .infoBox1 {
@@ -401,7 +392,6 @@ h6 {
   }
 }
 
-
 .booknow {
   padding-block: var(--section-spacing);
   background-color: var(--clr-dark-green);
@@ -410,18 +400,20 @@ h6 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    
   }
   .booknow-text {
-  
-    width: 80%;;
+    width: 80%;
   }
 
   .booknow-h3 {
     color: white;
+    padding-bottom: 2rem;
   }
   .booknow-p {
     color: white;
+  }
+  .booknow-btn {
+    padding-top: 2rem;
   }
 }
 
