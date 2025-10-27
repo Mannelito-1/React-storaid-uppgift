@@ -401,6 +401,30 @@ h6 {
   }
 }
 
+
+.booknow {
+  padding-block: var(--section-spacing);
+  background-color: var(--clr-dark-green);
+  .container-space {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+  }
+  .booknow-text {
+  
+    width: 80%;;
+  }
+
+  .booknow-h3 {
+    color: white;
+  }
+  .booknow-p {
+    color: white;
+  }
+}
+
 .footer {
   background-color: var(--clr-dark-green);
   height: 60px;
