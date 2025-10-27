@@ -10,6 +10,7 @@ import ChooseUs from './components/ChooseUs'
 import BookNow from './components/BookNow'
 import Pricing from './components/Pricing'
 import Subscribe from './components/Subscribe'
+import Althero from './components/Althero'
 
 function App() {
   return (
@@ -36,6 +37,8 @@ function App() {
     
     
     <Footer/>
+
+    <Althero/>
     </>
   )
 }

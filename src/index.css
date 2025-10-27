@@ -539,3 +539,31 @@ h6 {
     display: flex;
   }
 }
+
+
+.althero {
+  background-color: var(--clr-light-green);
+  
+
+  .container-space {
+    display: flex;
+    flex-direction: column;
+    padding-block: 9.5rem;
+
+    
+    
+  }
+
+  h1 {
+    font-size: 80px;
+    color: var(--clr-text-hero);
+    
+  }
+
+  p {
+    font-size: 16px;
+    color:var(--clr-text-hero);
+    width: 50%;
+    padding-top: 2rem;
+  }
+}
