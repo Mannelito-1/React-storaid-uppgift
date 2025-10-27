@@ -7,6 +7,9 @@
   --clr-text-hero: white;
   --hover-btn-bg: #ececec62;
   --clr-light-yellow: #faf8ec;
+
+
+  --section-spacing: 4rem;
 }
 
 body {
@@ -62,6 +65,7 @@ h6 {
 .container-space {
   width: 100%;
   margin-inline: auto;
+  
 
   @media (width > 576px) {
     max-width: 540px;
@@ -82,6 +86,7 @@ h6 {
   @media (width > 1400px) {
     max-width: 1350px;
   }
+  
 }
 .text-lg {
   color: var(--clr-dark-green);
@@ -191,11 +196,11 @@ h6 {
 
 .hero {
   background-color: var(--clr-light-green);
+  
   .container-space {
     position: relative;
     display: flex;
     flex-direction: row-reverse;
-
     gap: 10rem;
   }
 
@@ -234,10 +239,12 @@ h6 {
 }
 
 .about-us {
+  padding-block: var(--section-spacing);
   background-color: white;
   .container-space {
     display: flex;
     gap: 2rem;
+    
   }
 
   .img-bar {
@@ -283,10 +290,12 @@ h6 {
 }
 
 .partners {
+  padding-block: var(--section-spacing);
   background-color: #faf8ec;
   .container-space {
     display: flex;
     justify-content: space-around;
+    
   }
 
   .partners-logo {
@@ -298,8 +307,12 @@ h6 {
 }
 
 .services {
+  padding-block: var(--section-spacing);
+  
+  
   .container-space {
     display: flex;
+    
   }
 
   .top-text-small {
@@ -356,8 +369,11 @@ h6 {
 
 .ChooseUs {
   background-color: var(--clr-light-yellow);
+  padding-block: var(--section-spacing);
   .container-space {
     display: flex;
+    
+    
   }
 
   .infoBox1 {
