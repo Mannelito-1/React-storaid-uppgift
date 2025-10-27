@@ -475,6 +475,35 @@ h6 {
   }
 }
 
+
+.subscribe {
+  padding-block: var(--section-spacing);
+  background-color: var(--clr-light-yellow) ;
+
+  .container-space {
+    display: flex;
+    justify-content: space-between;
+    
+
+  }
+
+  .subscribe-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  
+
+  .email {
+    width: 540px;
+    height: 60px;
+    font-size: 20px;
+    
+  }
+}
+
 .footer {
   background-color: var(--clr-dark-green);
   height: 60px;

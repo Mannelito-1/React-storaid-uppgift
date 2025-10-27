@@ -9,6 +9,7 @@ import Services from './components/Services'
 import ChooseUs from './components/ChooseUs'
 import BookNow from './components/BookNow'
 import Pricing from './components/Pricing'
+import Subscribe from './components/Subscribe'
 
 function App() {
   return (
@@ -30,6 +31,8 @@ function App() {
     <Pricing/>
 
     <BookNow/>
+
+    <Subscribe/>
     
     
     <Footer/>
