@@ -1,49 +1,28 @@
-import React from 'react'
-import Header from './components/header'
-import Navbar from './components/Navbar'
-import Hero from './components/Hero'
-import AboutUs from './components/AboutUs'
-import LogosSection from './components/LogosSection'
-import Footer from './components/Footer'
-import Services from './components/Services'
-import ChooseUs from './components/ChooseUs'
-import BookNow from './components/BookNow'
-import Pricing from './components/Pricing'
-import Subscribe from './components/Subscribe'
-import Althero from './components/Althero'
-import Pagenotfound from './components/Pagenotfound'
+import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import HomePG from "./views/HomePG";
+import AboutPG from "./views/AboutPG";
+import ServicesPG from "./views/ServicesPG";
+import ContactusPG from "./views/ContactusPG";
+import Header from "./components/header";
+import Footer from "./components/Footer";
 
 function App() {
   return (
-    <>
+    <BrowserRouter>
     <Header />
+    <main>
+      <Routes>
+        <Route path="/" element={<HomePG />} />
+        <Route path="/about" element={<AboutPG />} />
+        <Route path="/services" element={<ServicesPG />} />
+        <Route path="contact" element= {<ContactusPG />} />
+      </Routes>
 
-    <Navbar />
-
-    <Hero />
-
-    <AboutUs/>
-
-    <LogosSection/>
-
-    <Services/>
-
-    <ChooseUs/>
-    
-    <Pricing/>
-
-    <BookNow/>
-
-    <Subscribe/>
-    
-    
+    </main>
     <Footer/>
-
-    
-
-    <Pagenotfound/>
-    </>
-  )
+    </BrowserRouter>
+  );
 }
 
-export default App
+export default App;
