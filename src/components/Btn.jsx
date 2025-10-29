@@ -1,12 +1,11 @@
-import React from 'react'
+import React from "react";
 
-function Btn({btnText}) {
+function Btn({ btnText }) {
   return (
     <>
-    <button class="btn hero-btn">{btnText}</button>
-    
+      <button class="btn hero-btn">{btnText}</button>
     </>
-  )
+  );
 }
 
-export default Btn
+export default Btn;

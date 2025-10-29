@@ -1,6 +1,6 @@
 import React from "react";
 
-function Althero({heroText, heroPtext}) {
+function Althero({ heroText, heroPtext }) {
   return (
     <>
       <section className="althero">
