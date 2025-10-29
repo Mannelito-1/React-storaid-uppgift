@@ -11,6 +11,7 @@ import BookNow from './components/BookNow'
 import Pricing from './components/Pricing'
 import Subscribe from './components/Subscribe'
 import Althero from './components/Althero'
+import Pagenotfound from './components/Pagenotfound'
 
 function App() {
   return (
@@ -38,7 +39,9 @@ function App() {
     
     <Footer/>
 
-    <Althero/>
+    
+
+    <Pagenotfound/>
     </>
   )
 }

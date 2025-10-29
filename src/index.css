@@ -392,30 +392,27 @@ h6 {
   }
 }
 
-
-
 .pricing {
-  padding-block:var(--section-spacing) ;
+  padding-block: var(--section-spacing);
   background-color: white;
 
   .top-text {
     padding-bottom: 2rem;
   }
-  
+
   .container-space {
     display: flex;
     justify-content: space-between;
   }
 
-  .pricingCard{
+  .pricingCard {
     background-color: var(--clr-light-yellow);
     display: flex;
-    flex-direction:column ;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     padding-top: 2rem;
     width: 20rem;
-    
   }
 
   .priceNumber {
@@ -427,11 +424,10 @@ h6 {
     padding-top: 2rem;
   }
 
-  .priceP{
+  .priceP {
     display: flex;
     gap: 2rem;
     padding-top: 1rem;
-    
   }
 
   .checkmark {
@@ -475,16 +471,13 @@ h6 {
   }
 }
 
-
 .subscribe {
   padding-block: var(--section-spacing);
-  background-color: var(--clr-light-yellow) ;
+  background-color: var(--clr-light-yellow);
 
   .container-space {
     display: flex;
     justify-content: space-between;
-    
-
   }
 
   .subscribe-right {
@@ -494,13 +487,10 @@ h6 {
     gap: 1rem;
   }
 
-  
-
   .email {
     width: 540px;
     height: 60px;
     font-size: 20px;
-    
   }
 }
 
@@ -540,30 +530,55 @@ h6 {
   }
 }
 
-
 .althero {
   background-color: var(--clr-light-green);
-  
 
   .container-space {
     display: flex;
     flex-direction: column;
     padding-block: 9.5rem;
-
-    
-    
   }
 
   h1 {
     font-size: 80px;
     color: var(--clr-text-hero);
-    
   }
 
   p {
     font-size: 16px;
-    color:var(--clr-text-hero);
+    color: var(--clr-text-hero);
     width: 50%;
     padding-top: 2rem;
+  }
+}
+
+.pageNotFound {
+  background-color: var(--clr-light-green);
+
+  .container-space {
+    display: flex;
+    justify-content: center;
+    padding-block: 25rem;
+  }
+
+  .pg-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .pg-title-small {
+    color: white;
+  }
+
+  .pg-header {
+    color: var(--clr-yellow);
+    font-size: 80px;
+  }
+
+  .pg-small {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    color: white;
+    width: 80%;
   }
 }
