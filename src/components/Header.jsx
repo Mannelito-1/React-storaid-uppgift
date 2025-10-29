@@ -1,5 +1,5 @@
 import React from 'react'
-
+import { Link } from 'react-router-dom'
 function Header() {
   return (
     <>
@@ -20,27 +20,28 @@ function Header() {
 
         <div class="right-header">
           <div class="fb-header">
-            <button class="header-btn">
-              <img src="src/components/Images/FB-icon.svg" alt="" />
-            </button>
+            <Link className='header-btn' to="/">
+               <img src="src/components/Images/FB-icon.svg" alt="" />
+            </Link>
+            
           </div>
 
-          <div class="twitter-header">
-            <button class="header-btn">
+          <div class="twitter-header" to="/">
+            <Link class="header-btn">
               <img src="src/components/Images/twitter-ico.svg" alt="" />
-            </button>
+            </Link>
           </div>
 
           <div class="instagram-header">
-            <button class="header-btn">
+            <Link class="header-btn" to="/">
               <img src="src/components/Images/instagram-icon.svg" alt="" />
-            </button>
+            </Link>
           </div>
 
           <div class="youtube-icon">
-            <button class="header-btn">
+            <Link class="header-btn" to="/">
               <img src="src/components/Images/youtube-icon.svg" alt="" />
-            </button>
+            </Link>
           </div>
         </div>
       </div>

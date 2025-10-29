@@ -1,21 +1,20 @@
 import React from "react";
 import Althero from "../components/Althero";
-import Services from "../components/Services";
+import ChooseUs from "../components/ChooseUs";
 import BookNow from "../components/BookNow";
 
-function ServicesPG() {
+function BookingPG() {
   return (
     <>
       <Althero
-        heroText="Services"
+        heroText="Booking"
         heroPtext="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo."
       />
-      <Services/>
 
-
+      <ChooseUs/>
       <BookNow/>
     </>
   );
 }
 
-export default ServicesPG;
+export default BookingPG;
