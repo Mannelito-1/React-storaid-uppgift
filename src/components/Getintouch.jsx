@@ -1,7 +1,25 @@
-import React from "react";
+import React, { useState } from "react";
 import Titlecomp from "./Titlecomp";
 import Btn from "./Btn";
 function Getintouch() {
+  const [formData, setFormData] = useState ({ name: '', email: '', telephone: '',  subject: '', comments: '',})
+
+  const handleChange = (e) => {
+    const { name, value } = e.target
+    setFormData({...formData, [name]:value})
+
+
+  }
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    
+    
+
+  }
+
+
   return (
     <>
       <section className="Getintouch">
@@ -20,77 +38,67 @@ function Getintouch() {
           </div>
 
           <div className="right-side">
-            <div className="infotext">
-              <div className="input-text">
-                <p>Your name</p> <p className="star">*</p>
+            <form className="form-box" onSubmit={handleSubmit} noValidate>
+              <div className="yourname">
+                <p className="form-p">Your name*</p>
+                <input className="yourname-input" required type="name" name="name"value={formData.name} onChange={handleChange} placeholder="Your name" />
               </div>
-              <div className="name-input">
-                <input
-                  className="name-box"
-                  type="text"
-                  placeholder="  Your name"
-                />
-              </div>
-            </div>
 
-            <div className="email-tele">
-              <div className="infotext">
-                <div className="input-text">
-                  <p>Email</p> <p className="star">*</p>
-                </div>
-                <div className="email-input">
+              <div className="email-tele">
+                <div className="email">
+                  <p className="form-p">Email*</p>
                   <input
-                    className="inputstows"
-                    type="text"
+                  className="email-input"
+                    type="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleChange}
+                    required
                     placeholder="Email"
+
                   />
                 </div>
-              </div>
-              <div className="infotext">
-                <div className="input-text">
-                  <p>Telephone</p> <p className="star">*</p>
-                </div>
-                <div className="tele-input">
+
+                <div className="tele">
+                  <p className="form-p">Telephone</p>
                   <input
-                    className="inputstows"
-                    type="text"
+                    className="tele-input"
+                    type="telephone"
+                    name="telephone"
+                    value={formData.telephone}
+                    onChange={handleChange}
                     placeholder="Telephone"
                   />
                 </div>
               </div>
-            </div>
 
-            <div className="subject">
-              <div className="infotext">
-                <div className="input-text">
-                  <p>Subject</p> <p className="star">*</p>
-                </div>
+              <div className="subject">
+                <p className="form-p">Subjecet*</p>
                 <input
-                  className="subject-box"
-                  type="text"
+                  className="subject-input"
+                  type="subjecttext"
+                  name="subject"
+                  value={formData.subject}
+                  onChange={handleChange}
+                  required
                   placeholder="How can we help you"
                 />
               </div>
-            </div>
 
-            <div className="comments">
-              <div className="infotext">
-                <div className="input-text">
-                  <p>Comments / Questions </p> <p className="star">*</p>
-                </div>
-                <div className="comments-input">
-                  <input
-                    className="comments-box"
-                    type="text"
-                    placeholder="  Comments"
-                  />
-                </div>
+              <div className="comments">
+                <p className="form-p">Comments / Questions *</p>
+                <textarea
+                  className="comments-input"
+                  name="comments"
+                  value={formData.comments}
+                  onChange={handleChange}
+                  required
+                  placeholder="Comments"
+                ></textarea>
               </div>
-            </div>
 
-            <div className="btn-submit-forum">
-              <Btn btnText="Submit" />
-            </div>
+              <button type="submit">Submit</button>
+            </form>
           </div>
         </div>
       </section>
