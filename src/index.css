@@ -582,3 +582,73 @@ h6 {
     width: 80%;
   }
 }
+
+.Getintouch {
+  padding-block: var(--section-spacing);
+
+  .container-space {
+    display: flex;
+  }
+
+  .top-text-small {
+    width: 140%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .img-left {
+    padding-top: 2rem;
+  }
+
+  .right-side {
+    background-color: var(--clr-light-yellow);
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding-top: 4rem;
+  }
+
+  .infotext {
+    display: flex;
+    flex-direction: column;
+  }
+  .input-text {
+    display: flex;
+    padding-bottom: 0.8rem;
+  }
+
+  .star {
+    color: red;
+  }
+
+  .email-tele {
+    display: flex;
+    gap: 1rem;
+    justify-content: space-evenly;
+  }
+
+  .name-box {
+    width: 600px;
+    height: 58px;
+    font-size: 20px;
+  }
+
+  .inputstows {
+    width: 290px;
+    height: 59px;
+    font-size: 20px;
+  }
+
+  .comments-box {
+    width: 600px;
+    height: 150px;
+    font-size: 20px;
+  }
+
+  .subject-box {
+    width: 600px;
+    height: 59px;
+    font-size: 20px;
+  }
+}
