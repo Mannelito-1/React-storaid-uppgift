@@ -9,6 +9,7 @@ import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import Subscribe from "./components/Subscribe";
 import BookingPG from "./views/BookingPG";
+import Page404PG from "./views/Page404PG";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <Route path="/services" element={<ServicesPG />} />
         <Route path="/contact" element= {<ContactusPG />} />
          <Route path="/Booking" element= {<BookingPG />} />
+         <Route path="/404" element= {<Page404PG />} />
       </Routes>
 
     </main>

@@ -8,9 +8,8 @@ function Navbar() {
         <div class="container">
           <div class="logotype">
             <Link to="/">
-             <img src="src/components/Images/logo-type.svg" alt="" />
+              <img src="src/components/Images/logo-type.svg" alt="" />
             </Link>
-           
           </div>
 
           <div class="nav-menu">
