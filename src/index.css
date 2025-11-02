@@ -611,14 +611,10 @@ h6 {
     padding-block: 2rem;
   }
 
-  
-  
   .yourname-input {
-    
     width: 600px;
     height: 60px;
     font-size: 20px;
-
   }
 
   .email-tele {
@@ -632,19 +628,19 @@ h6 {
     height: 59px;
     font-size: 20px;
   }
-   .tele-input {
+  .tele-input {
     width: 290px;
     height: 59px;
     font-size: 20px;
   }
 
-   .subject-input {
+  .subject-input {
     width: 600px;
     height: 59px;
     font-size: 20px;
   }
 
-   .comments-input {
+  .comments-input {
     width: 600px;
     height: 150px;
     font-size: 20px;
@@ -657,12 +653,9 @@ h6 {
     margin-left: 2rem;
     margin-right: 2rem;
     gap: 1rem;
-    
   }
 
   .form-p {
-    padding-bottom:1rem ;
+    padding-bottom: 1rem;
   }
-
-  
 }

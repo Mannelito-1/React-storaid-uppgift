@@ -1,24 +1,25 @@
 import React, { useState } from "react";
 import Titlecomp from "./Titlecomp";
-import Btn from "./Btn";
+
 function Getintouch() {
-  const [formData, setFormData] = useState ({ name: '', email: '', telephone: '',  subject: '', comments: '',})
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    telephone: "",
+    subject: "",
+    comments: "",
+  });
 
   const handleChange = (e) => {
-    const { name, value } = e.target
-    setFormData({...formData, [name]:value})
-
-
-  }
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
     
-    
-
-  }
-
+  };
 
   return (
     <>
@@ -41,21 +42,28 @@ function Getintouch() {
             <form className="form-box" onSubmit={handleSubmit} noValidate>
               <div className="yourname">
                 <p className="form-p">Your name*</p>
-                <input className="yourname-input" required type="name" name="name"value={formData.name} onChange={handleChange} placeholder="Your name" />
+                <input
+                  className="yourname-input"
+                  required
+                  type="name"
+                  name="name"
+                  value={formData.name}
+                  onChange={handleChange}
+                  placeholder="Your name"
+                />
               </div>
 
               <div className="email-tele">
                 <div className="email">
                   <p className="form-p">Email*</p>
                   <input
-                  className="email-input"
+                    className="email-input"
                     type="email"
                     name="email"
                     value={formData.email}
                     onChange={handleChange}
                     required
                     placeholder="Email"
-
                   />
                 </div>
 
@@ -97,7 +105,9 @@ function Getintouch() {
                 ></textarea>
               </div>
 
-              <button type="submit">Submit</button>
+              <button className="btn" type="submit">
+                Submit
+              </button>
             </form>
           </div>
         </div>
