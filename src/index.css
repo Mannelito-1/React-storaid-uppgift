@@ -774,9 +774,6 @@ h6 {
   }
 }
 
-
-
-
 .testimonials {
   background-color: #1f4739;
   padding-block: var(--section-spacing);
@@ -795,7 +792,6 @@ h6 {
     h3 {
       color: white;
     }
-
   }
 
   .title-p {
@@ -830,22 +826,18 @@ h6 {
   }
 
   .proflie-text {
-    
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
-    
   }
 
- .icon {
-  position: relative;
-  left:7rem;
-  top: 2rem;
- }
+  .icon {
+    position: relative;
+    left: 7rem;
+    top: 2rem;
+  }
 
- .stars {
-  font-size: 25px;
- }
-
-  
+  .stars {
+    font-size: 25px;
+  }
 }

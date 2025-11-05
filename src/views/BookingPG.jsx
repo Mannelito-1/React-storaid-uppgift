@@ -11,10 +11,10 @@ function BookingPG() {
         heroText="Booking"
         heroPtext="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo."
       />
-      <Bookingunit/>
+      <Bookingunit />
 
-      <ChooseUs/>
-      <BookNow/>
+      <ChooseUs />
+      <BookNow />
     </>
   );
 }
