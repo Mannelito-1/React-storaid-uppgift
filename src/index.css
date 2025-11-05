@@ -632,7 +632,7 @@ h6 {
   .tele-input {
     width: 290px;
     height: 59px;
-    font-size: 20px;
+    font-size: 16px;
   }
 
   .subject-input {
@@ -839,5 +839,67 @@ h6 {
 
   .stars {
     font-size: 25px;
+  }
+}
+
+.find-us {
+  background-color: var(--clr-light-green);
+
+  .container-space {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .left-side {
+    padding-top: 5.6rem;
+  }
+
+  .right-side {
+    background-color: #c6e7b565;
+    padding-left: 2rem;
+    width: 46%;
+  }
+
+  .title-text {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    padding-bottom: 2rem;
+    padding-top: 3rem;
+  }
+
+  .logo-box {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+  }
+
+  .logo {
+    display: flex;
+    background-color: var(--clr-dark-green);
+    border-radius: 50%;
+    width: 3.75rem;
+    height: 3.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .logos {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .lower-text {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    padding-top: 2rem;
+  }
+
+  .socialmedia-icon {
+    display: flex;
+    gap: 1rem;
   }
 }
