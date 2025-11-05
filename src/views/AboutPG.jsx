@@ -3,6 +3,7 @@ import Althero from "../components/Althero";
 import AboutUs from "../components/AboutUs";
 import LogosSection from "../components/LogosSection";
 import ChooseUs from "../components/ChooseUs";
+import Testimonial from "../components/Testimonial";
 
 function AboutPG() {
   return (
@@ -13,7 +14,7 @@ function AboutPG() {
       />
       <AboutUs/>
       <LogosSection/>
-
+      <Testimonial/>
       <ChooseUs/>
     </>
   );
