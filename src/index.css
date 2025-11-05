@@ -663,13 +663,11 @@ h6 {
 .bookingunit {
   padding-block: var(--section-spacing);
 
-
   .container-space {
     display: flex;
     gap: 3rem;
-    
   }
-  
+
   .bookingright {
     position: relative;
     padding-top: 3.5rem;
@@ -682,7 +680,6 @@ h6 {
   .heading-p {
     padding-bottom: 3.5rem;
   }
-
 
   .top-text-small {
     width: 200%;
@@ -712,21 +709,66 @@ h6 {
     height: 50px;
   }
 
-
   .storage-input {
     width: 596px;
     height: 150px;
-
   }
 
   .form-p {
     padding-bottom: 1rem;
     padding-top: 1rem;
-
   }
 
   .storage {
     padding-bottom: 2rem;
   }
-  
+}
+
+.blogs {
+  padding-block: var(--section-spacing);
+  .blogs-div {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 1rem;
+  }
+
+  .blog-card {
+    background-color: rgba(10, 39, 10, 0.795);
+    width: 430px;
+    border-radius: 1%;
+  }
+
+  .img-container {
+    display: flex;
+    justify-content: center;
+    padding-top: 1.5rem;
+  }
+
+  .img-text {
+    display: flex;
+    color: white;
+    gap: 1rem;
+    padding-left: 1.5rem;
+    padding-top: 1rem;
+  }
+
+  .blog-card-title {
+    padding-left: 1.5rem;
+    padding-top: 1rem;
+    color: white;
+
+    .card-title {
+      color: white;
+      padding-bottom: 1rem;
+    }
+  }
+
+  .read-more-btn {
+    display: flex;
+    padding-left: 1.5rem;
+    color: var(--clr-yellow);
+    padding-top: 1rem;
+
+    padding-bottom: 2rem;
+  }
 }

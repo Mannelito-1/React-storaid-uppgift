@@ -7,6 +7,7 @@ import Services from '../components/Services'
 import ChooseUs from '../components/ChooseUs'
 import Pricing from '../components/Pricing'
 import BookNow from '../components/BookNow'
+import Blogs from '../components/Blogs'
 
 function Home() {
   return (
@@ -19,6 +20,7 @@ function Home() {
     <ChooseUs/>
     <Pricing/>
     <BookNow/>
+    <Blogs/>
    
     </>
   )
