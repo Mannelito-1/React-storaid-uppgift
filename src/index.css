@@ -133,6 +133,7 @@ h6 {
   cursor: pointer;
 }
 
+/* titlecomp */
 .top-text-small {
   display: flex;
 
@@ -771,4 +772,80 @@ h6 {
 
     padding-bottom: 2rem;
   }
+}
+
+
+
+
+.testimonials {
+  background-color: #1f4739;
+  padding-block: var(--section-spacing);
+  .container-space {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .testimonial-headding {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+
+    h3 {
+      color: white;
+    }
+
+  }
+
+  .title-p {
+    width: 50%;
+    padding-bottom: 1.5rem;
+    color: white;
+  }
+
+  .testimonialsdiv {
+    display: flex;
+    justify-content: space-between;
+  }
+  .testimonial-card {
+    background-color: #ffffff;
+    width: 437px;
+    height: 295px;
+    padding-left: 1.5rem;
+    padding-bottom: 2rem;
+    padding-top: 2rem;
+    border-radius: 2%;
+  }
+
+  .card-text {
+    width: 70%;
+    padding-block: 2rem;
+  }
+
+  .profile {
+    display: flex;
+    gap: 1rem;
+    padding-top: 1rem;
+  }
+
+  .proflie-text {
+    
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    
+  }
+
+ .icon {
+  position: relative;
+  left:7rem;
+  top: 2rem;
+ }
+
+ .stars {
+  font-size: 25px;
+ }
+
+  
 }

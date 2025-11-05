@@ -8,6 +8,7 @@ import ChooseUs from '../components/ChooseUs'
 import Pricing from '../components/Pricing'
 import BookNow from '../components/BookNow'
 import Blogs from '../components/Blogs'
+import Testimonial from '../components/Testimonial'
 
 function Home() {
   return (
@@ -17,6 +18,7 @@ function Home() {
     <AboutUs/>
     <LogosSection/>
     <Services/>
+    <Testimonial/>
     <ChooseUs/>
     <Pricing/>
     <BookNow/>
