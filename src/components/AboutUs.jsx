@@ -3,30 +3,30 @@ import React from 'react'
 function AboutUs() {
   return (
     <>
-     <section class="about-us">
-      <div class="container-space">
-        <div class="about-us-left">
+     <section className="about-us">
+      <div className="container-space">
+        <div className="about-us-left">
           <img src="src/components/Images/about-us-img.svg" alt="" />
-          <div class="img-bar">
-            <div class="img-number">
+          <div className="img-bar">
+            <div className="img-number">
               <h2>12+</h2>
               <p>Years of Experience</p>
             </div>
 
-            <div class="img-number">
+            <div className="img-number">
               <h2>150K+</h2>
               <p>Satisfied Clients</p>
             </div>
 
-            <div class="img-number">
+            <div className="img-number">
               <h2>35+</h2>
               <p>Warehouse</p>
             </div>
           </div>
         </div>
 
-        <div class="about-us-right">
-          <div class="about-info">
+        <div className="about-us-right">
+          <div className="about-info">
             <h4>About Us</h4>
             <h3>Providing a Safe Space for Your Treasured Items</h3>
             <p>
@@ -37,8 +37,8 @@ function AboutUs() {
             </p>
           </div>
 
-          <div class="hover-btn-about-us">
-            <button class="hover-btn">
+          <div className="hover-btn-about-us">
+            <button className="hover-btn">
               <h5>Vision</h5>
               <p>
                 Sed ut perspiciatis unde omnis iste natus error sit voluptatem
@@ -46,24 +46,24 @@ function AboutUs() {
               </p>
             </button>
 
-            <button class="hover-btn">
+            <button className="hover-btn">
               <h5>Mission</h5>
-              <p class="hover-p">
+              <p className="hover-p">
                 Sed ut perspiciatis unde omnis iste natus error sit voluptatem
                 accusan tium doloremque laudantium.
               </p>
             </button>
           </div>
-          <div class="about-us-lower">
-            <div class="btn-lower">
-              <button class="btn">Discover More</button>
+          <div className="about-us-lower">
+            <div className="btn-lower">
+              <button className="btn">Discover More</button>
             </div>
 
-            <div class="img-icon">
+            <div className="img-icon">
               <img src="src/components/Images/about-us-ph.svg" alt="" />
                
             </div>
-             <div class="icon-text">
+             <div className="icon-text">
               <h5>More Information</h5>
               <p>+46 8 123 122 44</p>
             </div>
