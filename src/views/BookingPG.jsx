@@ -3,6 +3,7 @@ import Althero from "../components/Althero";
 import ChooseUs from "../components/ChooseUs";
 import BookNow from "../components/BookNow";
 import Bookingunit from "../components/Bookingunit";
+import Faq from "../components/Faq";
 
 function BookingPG() {
   return (
@@ -15,6 +16,7 @@ function BookingPG() {
 
       <ChooseUs />
       <BookNow />
+      <Faq/>  
     </>
   );
 }
