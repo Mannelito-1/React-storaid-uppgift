@@ -248,16 +248,67 @@ h6 {
     background-color: var(--clr-dark-green);
     display: flex;
     justify-content: space-around;
+    position: relative;
+    width: 615px;
+    height: 149px;
+    left: 1.5rem;
+    bottom: 3rem;
+    padding-top: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    border-radius: 10px;
   }
 
-  .hover-btn-about-us {
+  .img-number {
+    color: whitesmoke;
+  }
+  .number-text1 {
+    position: relative;
+    right: 1rem;
+  }
+
+  .number-text2 {
+    position: relative;
+    left: 1.2rem;
+  }
+
+  .about-us-right {
     display: flex;
+    flex-direction: column;
+  }
+
+  .about-info {
+    padding-bottom: 1rem;
+  }
+
+  .hover-about-us {
+    display: flex;
+    height: 156px;
+    width: 640px;
+
+    padding-left: 1rem;
     gap: 1rem;
+  }
+  .hover {
+    border: 2px solid transparent;
+
+    padding-top: 1.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .hover.active {
+    border-color: var(--clr-yellow);
+  }
+
+  .hover-p {
+    padding-top: 1rem;
   }
 
   .about-us-lower {
     display: flex;
     gap: 10rem;
+    padding-top: 3rem;
   }
 
   .about-us-ph {
