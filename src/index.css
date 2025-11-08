@@ -123,10 +123,9 @@ h6 {
   cursor: pointer;
   font-size: 16px;
   font-weight: 600;
-
 }
 
-.btn.active{
+.btn.active {
   background-color: var(--clr-dark-green);
   color: white;
   transition: all 0.3s ease;
@@ -399,7 +398,7 @@ h6 {
     align-items: center;
     gap: 3rem;
 
-    h4{
+    h4 {
       color: var(--clr-dark-green);
     }
   }
@@ -407,13 +406,13 @@ h6 {
   .box1 {
     grid-area: box1;
     border: 2px transparent;
-   
+
     padding-block: 1rem;
     padding-left: 1rem;
     padding-right: 3rem;
   }
   .box1.active {
-     border-radius: 10px;
+    border-radius: 10px;
     border: 3px solid var(--clr-yellow);
   }
 
@@ -423,7 +422,6 @@ h6 {
     padding-block: 1rem;
     padding-left: 1rem;
     padding-right: 3rem;
-    
   }
 
   .box2.active {
@@ -524,6 +522,42 @@ h6 {
     align-items: center;
     padding-top: 2rem;
     width: 20rem;
+    padding-bottom: 2rem;
+    border-radius: 5px;
+  }
+
+  .pricingCard.active {
+    background-color: var(--clr-dark-green);
+    color: white;
+    h5 {
+      color: white;
+    }
+    .checkmark {
+      background-color: var(--clr-yellow);
+      color: var(--clr-dark-green);
+    }
+
+    .btn.active {
+      background-color: white;
+      color: var(--clr-dark-green);
+    }
+
+    transition: all ease 0.3s;
+  }
+
+  .dollar {
+    position: relative;
+    right: 1.5rem;
+  }
+
+  .month {
+    position: relative;
+    left: 1rem;
+    top: 2rem;
+  }
+
+  .p-text {
+    padding-left: 2.2rem;
   }
 
   .priceNumber {
@@ -537,7 +571,7 @@ h6 {
 
   .priceP {
     display: flex;
-    gap: 2rem;
+    gap: 1rem;
     padding-top: 1rem;
   }
 
