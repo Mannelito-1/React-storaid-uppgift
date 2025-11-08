@@ -280,6 +280,15 @@ h6 {
   .about-info {
     padding-bottom: 1rem;
   }
+  .btn {
+    background-color: var(--clr-yellow);
+  }
+
+  .btn.active {
+    background-color: var(--clr-dark-green);
+    color: white;
+    transition: all 0.3s ease;
+  }
 
   .hover-about-us {
     display: flex;

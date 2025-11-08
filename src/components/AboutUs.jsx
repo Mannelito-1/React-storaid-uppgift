@@ -66,7 +66,9 @@ function AboutUs() {
             </div>
             <div className="about-us-lower">
               <div className="btn-lower">
-                <button className="btn">Discover More</button>
+                <button className={`btn ${onHover === "discover more" ? "active" : ""}`}
+                onMouseEnter={() => setOnHover("discover more")}
+                onMouseLeave={() => setOnHover(null)}>Discover More</button>
               </div>
 
               <div className="img-icon">
