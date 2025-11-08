@@ -1,4 +1,5 @@
 import React from 'react'
+import Btn from './Btn'
 
 function Hero() {
   return (
@@ -18,7 +19,7 @@ function Hero() {
             lobortis, libero at iaculis luctus, nisi ex pellentesque nisi, at
             euismod sem ipsum ac dolor.
           </p>
-          <button className="btn hero-btn">Discover More</button>
+          <Btn btnText="Discover More"/>
         </div>
       </div>
     </section>
