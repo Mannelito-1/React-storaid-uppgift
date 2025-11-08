@@ -123,7 +123,15 @@ h6 {
   cursor: pointer;
   font-size: 16px;
   font-weight: 600;
+
 }
+
+.btn.active{
+  background-color: var(--clr-dark-green);
+  color: white;
+  transition: all 0.3s ease;
+}
+
 .hover-btn {
   width: 322px;
   height: 156px;

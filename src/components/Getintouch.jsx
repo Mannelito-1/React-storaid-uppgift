@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Titlecomp from "./Titlecomp";
+import Btn from "./Btn";
 
 function Getintouch() {
   const [formData, setFormData] = useState({
@@ -17,6 +18,7 @@ function Getintouch() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    alert("works")
 
     
   };
@@ -105,9 +107,7 @@ function Getintouch() {
                 ></textarea>
               </div>
 
-              <button className="btn" type="submit">
-                Submit
-              </button>
+              <Btn className="btn" type="submit" btnText="Submit"/>
             </form>
           </div>
         </div>

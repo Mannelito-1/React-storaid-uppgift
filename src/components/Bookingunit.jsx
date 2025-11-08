@@ -91,7 +91,7 @@ function Bookingunit() {
                   placeholder="Describe your storage purpose so that we can match your request"
                 ></textarea>
               </div>
-              <button className="btn" type="submit">Book Unit</button>
+              <Btn type="submit" btnText="Book Unit"/>
             </form>
           </div>
         </div>

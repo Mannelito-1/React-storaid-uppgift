@@ -1,5 +1,6 @@
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
+import Btn from "./Btn";
 
 function Navbar() {
   return (
@@ -39,7 +40,7 @@ function Navbar() {
           </div>
 
           <div className="book-now">
-            <button className="btn">Book now</button>
+            <Btn btnText="Booking"/>
           </div>
         </div>
       </section>
