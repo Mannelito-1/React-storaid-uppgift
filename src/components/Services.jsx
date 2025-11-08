@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 
 function Services() {
+  const [onHover,setOnHover] = useState(null)
   return (
     <>
       <section className="services">
@@ -25,7 +26,9 @@ function Services() {
 
         <div className="container-space">
           <div className="services-grid">
-            <div className="box1">
+            <div className={`box1 ${onHover === "box1" ? "active" : ""}`}
+              onMouseEnter={() => setOnHover("box1")}
+              onMouseLeave={()=> setOnHover (null)}>
               <h4>Diverse Unit Sizes</h4>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
@@ -37,24 +40,30 @@ function Services() {
               <img src="src/components/Images/services-img1.svg" alt="" />
             </div>
 
-            <div className="box2">
-              <h4>Diverse Unit Sizes</h4>
+            <div className={`box2 ${onHover === "box2" ? "active" : ""}`}
+              onMouseEnter={() => setOnHover("box2")}
+              onMouseLeave={()=> setOnHover (null)}>
+              <h4>Vehicle Storage</h4>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
                 tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.{" "}
               </p>
             </div>
 
-            <div className="box3">
-              <h4>Diverse Unit Sizes</h4>
+            <div className={`box3 ${onHover === "box3" ? "active" : ""}`}
+              onMouseEnter={() => setOnHover("box3")}
+              onMouseLeave={()=> setOnHover (null)}>
+              <h4>Moving Assistance</h4>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
                 tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.{" "}
               </p>
             </div>
 
-            <div className="box4">
-              <h4>Diverse Unit Sizes</h4>
+            <div className={`box4 ${onHover === "box4" ? "active" : ""}`}
+              onMouseEnter={() => setOnHover("box4")}
+              onMouseLeave={()=> setOnHover (null)}>
+              <h4>Top-Notch Security</h4>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
                 tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.{" "}
