@@ -887,11 +887,15 @@ h6 {
     width: 430px;
     border-radius: 1%;
     color: white;
+    
   }
 
-  .blog-card.active * {
+  .blog-card.active  {
     color: var(--clr-dark-green);
     background-color: var(--clr-blog-card-light);
+    border: var(--clr-dark-green) 3px solid ;
+    
+    
 
     h6 {
       color: var(--clr-dark-green);
@@ -907,6 +911,10 @@ h6 {
 
     .calender-light{
       display: none;
+    }
+
+    .description {
+      color: var(--clr-dark-green);
     }
 
    
@@ -929,6 +937,7 @@ h6 {
     max-height: 4.5em;
     overflow: hidden;
     width: 23rem;
+    color: white;
    
   }
 
