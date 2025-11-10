@@ -7,6 +7,7 @@
   --clr-text-hero: white;
   --hover-btn-bg: #ececec62;
   --clr-light-yellow: #faf8ec;
+  --clr-blog-card-light: #f1ffea;
 
   --section-spacing: 4rem;
 }
@@ -50,6 +51,10 @@ h6 {
   color: var(--clr-dark-green);
   font-size: 20px;
   font-weight: 600;
+}
+
+.linkStyle {
+  text-decoration: none;
 }
 
 .container {
@@ -878,23 +883,68 @@ h6 {
   }
 
   .blog-card {
-    background-color: rgba(10, 39, 10, 0.795);
+    background-color: var(--clr-dark-green);
     width: 430px;
     border-radius: 1%;
+    color: white;
+  }
+
+  .blog-card.active * {
+    color: var(--clr-dark-green);
+    background-color: var(--clr-blog-card-light);
+
+    h6 {
+      color: var(--clr-dark-green);
+    }
+
+    .read-more-btn {
+      color: var(--clr-yellow);
+    }
+
+    .calander-dark {
+      display:block;
+    }
+
+    .calender-light{
+      display: none;
+    }
+
+   
+
+
   }
 
   .img-container {
     display: flex;
     justify-content: center;
     padding-top: 1.5rem;
+
+    img {
+      width: 380px;
+    }
+  }
+
+  .description {
+    line-height: 1.5em;
+    max-height: 4.5em;
+    overflow: hidden;
+    width: 23rem;
+   
   }
 
   .img-text {
     display: flex;
     color: white;
-    gap: 1rem;
+    gap: 0.5rem;
     padding-left: 1.5rem;
     padding-top: 1rem;
+    .calander-dark {
+      display: none;
+    }
+
+    .calender-light {
+      display: block;
+    }
   }
 
   .blog-card-title {
