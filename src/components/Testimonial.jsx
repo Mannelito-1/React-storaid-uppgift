@@ -1,6 +1,19 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 function Testimonial() {
+  const [testimonialItems, setTestimonialItems] = useState([]);
+
+  const fetchData = async () => {
+    const res = await fetch(
+      "https://win25-jsf-assignment.azurewebsites.net/api/testimonials"
+    );
+    const data = await res.json();
+    setTestimonialItems(data);
+  };
+
+  useEffect(() => {
+    fetchData();
+  }, []);
   return (
     <>
       <section className="testimonials">
@@ -17,116 +30,38 @@ function Testimonial() {
           </div>
 
           <div className="testimonialsdiv">
-            <div className="testimonial-card">
-              <div className="testimonial-stars">
-                <p className="stars">★★★★</p>
-              </div>
-              <div className="card-text">
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipis cing elit. Ut
-                  libero lectus, porta nec turpis sit amet, lobortis fringilla
-                  ante.
-                </p>
-              </div>
-
-              <div className="profile">
-                <div className="img-container">
-                  <img
-                    src="src/components/Images/testimonials-profile.svg"
-                    alt=""
-                  />
+            {testimonialItems.map((item) => (
+              <div key={item.id} className="testimonial-card">
+                <div className="testimonial-stars">
+                  <p className="stars">{"★".repeat(item.rating)}</p>
+                </div>
+                <div className="card-text">
+                  <p>{item.comment}</p>
                 </div>
 
-                <div className="proflie-text">
-                  <h6>Aiden Harvey</h6>
-                  <p>Customer</p>
-                </div>
+                <div className="profile">
+                  <div className="img-container">
+                    <img  className="proflie-pic"src={item.avatarUrl} alt="" />
+                  </div>
 
-                <div className="icon">
-                  <img
-                    src="src/components/Images/testimonials-icon.svg"
-                    alt=""
-                  />
-                </div>
-              </div>
-            </div>
+                  <div className="proflie-text">
+                    <h6>{item.name}</h6>
+                    <p> {item.companyName}</p>
+                  </div>
 
-
-
-              <div className="testimonial-card">
-              <div className="testimonial-stars">
-                <p className="stars">★★★★</p>
-              </div>
-              <div className="card-text">
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipis cing elit. Ut
-                  libero lectus, porta nec turpis sit amet, lobortis fringilla
-                  ante.
-                </p>
-              </div>
-
-              <div className="profile">
-                <div className="img-container">
-                  <img
-                    src="src/components/Images/testimonials-profile.svg"
-                    alt=""
-                  />
-                </div>
-
-                <div className="proflie-text">
-                  <h6>Aiden Harvey</h6>
-                  <p>Customer</p>
-                </div>
-
-                <div className="icon">
-                  <img
-                    src="src/components/Images/testimonials-icon.svg"
-                    alt=""
-                  />
+                  <div className="icon">
+                    <img
+                      src="src/components/Images/testimonials-icon.svg"
+                      alt=""
+                    />
+                  </div>
                 </div>
               </div>
-            </div>
-
-
-
-
-              <div className="testimonial-card">
-              <div className="testimonial-stars">
-                <p className="stars">★★★★</p>
-              </div>
-              <div className="card-text">
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipis cing elit. Ut
-                  libero lectus, porta nec turpis sit amet, lobortis fringilla
-                  ante.
-                </p>
-              </div>
-
-              <div className="profile">
-                <div className="img-container">
-                  <img
-                    src="src/components/Images/testimonials-profile.svg"
-                    alt=""
-                  />
-                </div>
-
-                <div className="proflie-text">
-                  <h6>Aiden Harvey</h6>
-                  <p>Customer</p>
-                </div>
-
-                <div className="icon">
-                  <img
-                    src="src/components/Images/testimonials-icon.svg"
-                    alt=""
-                  />
-                </div>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>
-      c
+      
     </>
   );
 }
