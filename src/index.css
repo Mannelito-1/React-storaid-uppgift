@@ -1163,6 +1163,7 @@ h6 {
 
   .card-bg {
     background-color: #f1c30c;
+    transition: ease 0.5s;
   }
 
   .arrow {
