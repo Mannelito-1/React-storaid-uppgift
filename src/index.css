@@ -57,6 +57,10 @@ h6 {
   text-decoration: none;
 }
 
+.validation-error {
+  color: rgba(197, 0, 0, 0.842);
+}
+
 .container {
   display: flex;
   flex-direction: row;
@@ -627,20 +631,51 @@ h6 {
 
   .container-space {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
   }
 
   .subscribe-right {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 1rem;
+  }
+
+  .validation-error {
+    display: flex;
+    position: absolute;
+    top: 4rem;
+    left: 1rem;
+    font-weight: 900;
+  }
+  .success {
+    display: flex;
+    position: absolute;
+    top: 4rem;
+    left: 1rem;
+    font-weight: 900;
+  }
+
+  .sub-email {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .email {
     width: 540px;
     height: 60px;
     font-size: 20px;
+    border: 2px solid var(--clr-yellow);
+  }
+  .email::placeholder {
+    color: var(--clr-yellow);
+  }
+
+  .submit-btn {
+    display: flex;
+    padding-left: 1rem;
+    flex-direction: column;
   }
 }
 
@@ -887,15 +922,12 @@ h6 {
     width: 430px;
     border-radius: 1%;
     color: white;
-    
   }
 
-  .blog-card.active  {
+  .blog-card.active {
     color: var(--clr-dark-green);
     background-color: var(--clr-blog-card-light);
-    border: var(--clr-dark-green) 3px solid ;
-    
-    
+    border: var(--clr-dark-green) 3px solid;
 
     h6 {
       color: var(--clr-dark-green);
@@ -906,20 +938,16 @@ h6 {
     }
 
     .calander-dark {
-      display:block;
+      display: block;
     }
 
-    .calender-light{
+    .calender-light {
       display: none;
     }
 
     .description {
       color: var(--clr-dark-green);
     }
-
-   
-
-
   }
 
   .img-container {
@@ -938,7 +966,6 @@ h6 {
     overflow: hidden;
     width: 23rem;
     color: white;
-   
   }
 
   .img-text {
@@ -988,10 +1015,7 @@ h6 {
   .container-space {
     display: flex;
     flex-direction: column;
-    
   }
-
- 
 
   .testimonial-headding {
     display: flex;
@@ -1029,7 +1053,6 @@ h6 {
     width: 100%;
     padding-block: 2rem;
     padding-right: 1rem;
-    
   }
 
   .profile {
@@ -1046,14 +1069,12 @@ h6 {
   }
   .proflie-pic {
     border-radius: 50%;
-
   }
 
   .icon {
     position: relative;
     right: 2rem;
     top: 2rem;
-    
   }
 
   .stars {
