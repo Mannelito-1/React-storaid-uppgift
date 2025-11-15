@@ -11,17 +11,125 @@ function Getintouch() {
     comments: "",
   });
 
+  const [errors, setErrors] = useState({});
+  const [validSubmit,setValidSubmit] = useState(false)
+
+
+  const validateField = (name, value) => {
+    let error= ''
+
+    if (name === 'name' && !/^[A-Za-zÅÄÖåäö\s]{2,}$/.test(value) ) {
+      error = "Must contain at least 2 characters, no numbers"
+    }
+    else if (name === 'email' && !/^[A-Za-z0-9._-]+@[A-Za-z0-9.-]+\.[A-Za-z0-9]{2,}$/.test(value)) { 
+      error ="Must be a valid email (eg. name@domain.com)"
+      
+    }
+
+    else if (name === 'subject' && !/^[A-Za-zÅÄÖåäö\s0-9]{2,}$/.test(value)) { 
+      error ="Must contain at least 2 characters"
+      
+    }
+
+    else if (name === 'comments' && !/^[A-Za-zÅÄÖåäö\s0-9]{2,}$/.test(value)) { 
+      error ="Must contain at least 2 characters"
+      
+    }
+
+
+    
+    setErrors(prev => ({ ...prev, [name]: error }));
+  }
+
+
+
+  const validateForm = () => {
+    const newErrors = {}
+
+    if (!/^[A-Za-zÅÄÖåäö\s]{2,}$/.test(formData.name))
+      newErrors.name ="Must contain at least 2 characters, no numbers "
+
+
+    if (!/^[A-Za-z0-9._-]+@[A-Za-z0-9.-]+\.[A-Za-z0-9]{2,}$/.test(formData.email))
+      newErrors.email ="Must be a valid email (eg. name@domain.com) "
+
+
+    if  (!/^[A-Za-zÅÄÖåäö\s0-9]{2,}$/.test(formData.subject))
+      newErrors.subject ="Must contain at least 2 characters"
+
+
+     if  (!/^[A-Za-zÅÄÖåäö\s0-9]{2,}$/.test(formData.comments))
+      newErrors.comments ="Must contain at least 2 characters"
+
+
+
+    setErrors(newErrors)
+  return Object.keys(newErrors).length === 0
+
+  }
+  
+
+
+
+  
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
+
+
+    validateField(name, value)
   };
 
-  const handleSubmit = (e) => {
+  
+  
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    alert("works")
+
+    if (validateForm()) {
+      console.log("valid")
+      const  res = await fetch ('https://win25-jsf-assignment.azurewebsites.net/api/contact',  {
+      method:"POST",
+      headers: {
+        'Content-Type' : 'application/json'
+      },
+      body: JSON.stringify({
+        name: formData.name,
+        email: formData.email,
+        phoneNumber: formData.telephone,
+        subject: formData.subject,
+        comment: formData.comments
+      })
+    });
+
+    if (res.ok) {
+      setFormData ({
+        name:"",
+        email:"",
+        telephone:"",
+        subject:"",
+        comments:"",
+
+      });
+      setValidSubmit(true);
+      setTimeout(()  => setValidSubmit(false), 3000)
+    }
+    }
+
+    else {
+      console.log("not working")
+      
+    }
+
+  
 
     
+
+  
   };
+
+  
 
   return (
     <>
@@ -45,28 +153,29 @@ function Getintouch() {
               <div className="yourname">
                 <p className="form-p">Your name*</p>
                 <input
-                  className="yourname-input"
+                  
+                   className={`yourname-input ${errors.name ? "input-error" : ""}`}
                   required
                   type="name"
                   name="name"
                   value={formData.name}
                   onChange={handleChange}
                   placeholder="Your name"
-                />
+                /> {errors.name && <span className="validation-error"> {errors.name}  </span>}
               </div>
 
               <div className="email-tele">
                 <div className="email">
                   <p className="form-p">Email*</p>
                   <input
-                    className="email-input"
+                    className= {`email-input ${errors.email ? "input-error" : ""}`}
                     type="email"
                     name="email"
                     value={formData.email}
                     onChange={handleChange}
                     required
                     placeholder="Email"
-                  />
+                  />{errors.email && <span className="validation-error"> {errors.email}  </span>}
                 </div>
 
                 <div className="tele">
@@ -85,27 +194,28 @@ function Getintouch() {
               <div className="subject">
                 <p className="form-p">Subjecet*</p>
                 <input
-                  className="subject-input"
-                  type="subjecttext"
+                   className= {`subject-input ${errors.subject ? "input-error" : ""}`}
+                  type="subject"
                   name="subject"
                   value={formData.subject}
                   onChange={handleChange}
                   required
                   placeholder="How can we help you"
-                />
+                />{errors.subject && <span className="validation-error"> {errors.subject}  </span>}
               </div>
 
               <div className="comments">
                 <p className="form-p">Comments / Questions *</p>
                 <textarea
-                  className="comments-input"
+                   className= {`comments-input ${errors.comments ? "input-error" : ""}`}
                   name="comments"
                   value={formData.comments}
                   onChange={handleChange}
                   required
                   placeholder="Comments"
-                ></textarea>
+                ></textarea>{errors.comments && <span className="validation-error"> {errors.comments}  </span>}
               </div>
+              {validSubmit && <p className="valid-submit">Thank you for your Question</p>}
 
               <Btn className="btn" type="submit" btnText="Submit"/>
             </form>

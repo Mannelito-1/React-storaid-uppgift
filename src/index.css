@@ -61,6 +61,35 @@ h6 {
   color: rgba(197, 0, 0, 0.842);
 }
 
+.input-error {
+  border: red 2px solid;
+  color: red;
+}
+
+.valid-submit {
+  color: rgb(43, 138, 43);
+  font-weight: 900;
+}
+
+input {
+  border: var(--clr-yellow) 2px solid;
+  padding-left: 1rem;
+
+}
+
+input::placeholder {
+  color: var(--clr-yellow);
+}
+
+  textarea {
+    border: var(--clr-yellow) 2px solid;
+    padding-left: 1rem;
+    padding-top: 1rem;
+  }
+  textarea::placeholder {
+    color: var(--clr-yellow);
+  }
+
 .container {
   display: flex;
   flex-direction: row;
@@ -70,6 +99,9 @@ h6 {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
 }
+
+
+
 .container-space {
   width: 100%;
   margin-inline: auto;
@@ -801,6 +833,8 @@ h6 {
     height: 60px;
     font-size: 20px;
   }
+
+ 
 
   .email-tele {
     display: flex;
