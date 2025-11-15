@@ -74,21 +74,29 @@ h6 {
 input {
   border: var(--clr-yellow) 2px solid;
   padding-left: 1rem;
-
+  font-size: 20px;
 }
 
 input::placeholder {
   color: var(--clr-yellow);
 }
 
-  textarea {
-    border: var(--clr-yellow) 2px solid;
-    padding-left: 1rem;
-    padding-top: 1rem;
-  }
-  textarea::placeholder {
-    color: var(--clr-yellow);
-  }
+textarea {
+  border: var(--clr-yellow) 2px solid;
+  padding-left: 1rem;
+  padding-top: 1rem;
+  font-size: 20px;
+}
+textarea::placeholder {
+  color: var(--clr-yellow);
+}
+
+.validation-star {
+  display: inline;
+  flex-direction: column;
+  color: red;
+  font-size: 17px;
+}
 
 .container {
   display: flex;
@@ -99,8 +107,6 @@ input::placeholder {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
 }
-
-
 
 .container-space {
   width: 100%;
@@ -834,8 +840,6 @@ input::placeholder {
     font-size: 20px;
   }
 
- 
-
   .email-tele {
     display: flex;
     gap: 1rem;
@@ -895,6 +899,10 @@ input::placeholder {
   .bookleft {
     width: 100%;
   }
+  .yourname {
+    display: flex;
+    flex-direction: column;
+  }
 
   .heading-p {
     padding-bottom: 3.5rem;
@@ -920,12 +928,13 @@ input::placeholder {
   .name-email-input {
     width: 288px;
     height: 50px;
-    font-size: 17px;
+    font-size: 20px;
   }
 
   .unit-input {
     width: 596px;
     height: 50px;
+    font-size: 20px;
   }
 
   .storage-input {
@@ -936,6 +945,7 @@ input::placeholder {
   .form-p {
     padding-bottom: 1rem;
     padding-top: 1rem;
+    font-size: 17px;
   }
 
   .storage {
