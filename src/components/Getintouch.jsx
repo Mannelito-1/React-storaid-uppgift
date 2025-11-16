@@ -26,13 +26,18 @@ function Getintouch() {
       
     }
 
-    else if (name === 'subject' && !/^[A-Za-zÅÄÖåäö\s0-9]{2,}$/.test(value)) { 
+    else if (name === 'subject' && !/^[A-Za-zÅÄÖåäö0-9\s.,!?'"():;\-]{2,}$/.test(value)) { 
       error ="Must contain at least 2 characters"
       
     }
 
-    else if (name === 'comments' && !/^[A-Za-zÅÄÖåäö0-9\s.,!?'"():;\-]{2,}$$/.test(value)) { 
+    else if (name === 'comments' && !/^[A-Za-zÅÄÖåäö0-9\s.,!?'"():;\-]{2,}$/.test(value)) { 
       error ="Must contain at least 2 characters"
+      
+    }
+
+     else if (name === 'telephone' && !/^\+?[0-9\s-]{1,20}$/.test(value)) { 
+      error ="Must contain at numbers"
       
     }
 
@@ -151,7 +156,7 @@ function Getintouch() {
           <div className="right-side">
             <form className="form-box" onSubmit={handleSubmit} noValidate>
               <div className="yourname">
-                <p className="form-p">Your name*</p>
+                <p className="form-p">Your name<span className="validation-star"> *</span></p>
                 <input
                   
                    className={`yourname-input ${errors.name ? "input-error" : ""}`}
@@ -166,7 +171,7 @@ function Getintouch() {
 
               <div className="email-tele">
                 <div className="email">
-                  <p className="form-p">Email*</p>
+                  <p className="form-p">Email<span className="validation-star"> *</span></p>
                   <input
                     className= {`email-input ${errors.email ? "input-error" : ""}`}
                     type="email"
@@ -181,18 +186,18 @@ function Getintouch() {
                 <div className="tele">
                   <p className="form-p">Telephone</p>
                   <input
-                    className="tele-input"
-                    type="telephone"
+                    className= {`tele-input ${errors.telephone ? "input-error" : ""}`}
+                    type="tel"
                     name="telephone"
                     value={formData.telephone}
                     onChange={handleChange}
                     placeholder="Telephone"
-                  />
+                  />{errors.telephone && <span className="validation-error"> {errors.telephone}  </span>}
                 </div>
               </div>
 
               <div className="subject">
-                <p className="form-p">Subjecet*</p>
+                <p className="form-p">Subjecet<span className="validation-star"> *</span></p>
                 <input
                    className= {`subject-input ${errors.subject ? "input-error" : ""}`}
                   type="subject"
@@ -205,7 +210,7 @@ function Getintouch() {
               </div>
 
               <div className="comments">
-                <p className="form-p">Comments / Questions *</p>
+                <p className="form-p">Comments / Questions<span className="validation-star"> *</span></p>
                 <textarea
                    className= {`comments-input ${errors.comments ? "input-error" : ""}`}
                   name="comments"
