@@ -8,6 +8,7 @@
   --hover-btn-bg: #ececec62;
   --clr-light-yellow: #faf8ec;
   --clr-blog-card-light: #f1ffea;
+  --clr-focus-blue:#69acff;
 
   --section-spacing: 4rem;
 }
@@ -139,6 +140,15 @@ textarea::placeholder {
   font-weight: 600;
 }
 
+.nav-active {
+  color: var(--clr-yellow);
+  background-color: var(--clr-dark-green);
+  padding-top: 0.3rem;
+  padding-bottom: 0.3rem;
+  padding-left: 0.7rem;
+  padding-right: 0.7rem;
+}
+
 .header-btn {
   background-color: var(--clr-yellow);
   border-radius: 50%;
@@ -147,6 +157,10 @@ textarea::placeholder {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+a:focus-visible {
+  outline: var(--clr-focus-blue) 3px solid;
 }
 
 .footer-btn {
