@@ -1,11 +1,14 @@
 import React, { useEffect, useState } from "react";
 import Titlecomp from "./Titlecomp";
 import { Link } from "react-router-dom";
+import { faExpand } from "@fortawesome/free-solid-svg-icons";
 
 function Blogs() {
   const [onHover, setOnHover] = useState(null);
 
   const [blogItems, setBlogItems] = useState([]);
+
+  const [blogExpand, setBlogExpand] = useState(false);
 
   const fetchData = async () => {
     const res = await fetch(
@@ -33,20 +36,18 @@ function Blogs() {
 
           <div className="blogs-div">
             {blogItems.map((item) => (
-              <Link
+              <div
                 onFocus={() => setOnHover(item.id)}
                 onBlur={() => setOnHover(null)}
                 to="/404"
                 className="linkStyle"
                 key={item.id}
                 aria-label={`Read blog : ${item.title}`}
-                
               >
                 <article
                   className={`blog-card ${onHover === item.id ? "active" : ""}`}
                   onMouseEnter={() => setOnHover(item.id)}
                   onMouseLeave={() => setOnHover(null)}
-                  
                 >
                   <div className="img-container">
                     <img src={item.imageUrl} alt={item.title} />
@@ -75,14 +76,27 @@ function Blogs() {
 
                   <div className="blog-card-title">
                     <h6 className="card-title">{item.title}</h6>
-                    <p className="description">{item.description}</p>
+                    <p
+                      className={`description ${
+                        blogExpand === item.id ? "expanded" : ""
+                      }`}
+                    >
+                      {item.description}
+                    </p>
                   </div>
 
-                  <div className="read-more">
-                    <p className="read-more-text">Read more →</p>
+                  <div
+                    className="read-more"
+                    onClick={() =>
+                      setBlogExpand(blogExpand === item.id ? null : item.id)
+                    }
+                  >
+                    <button className="read-more-text">
+                      {blogExpand === item.id ? "show less↑ " : "read more ↓"}
+                    </button>
                   </div>
                 </article>
-              </Link>
+              </div>
             ))}
           </div>
         </div>

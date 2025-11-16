@@ -23,6 +23,7 @@ body {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  cursor: default;
 }
 
 h2 {
@@ -81,6 +82,7 @@ input {
   border: var(--clr-yellow) 2px solid;
   padding-left: 1rem;
   font-size: 20px;
+  cursor: pointer;
 }
 
 input::placeholder {
@@ -152,6 +154,7 @@ textarea::placeholder {
   padding-bottom: 0.3rem;
   padding-left: 0.7rem;
   padding-right: 0.7rem;
+  cursor: pointer;
 }
 
 .header-btn {
@@ -162,6 +165,14 @@ textarea::placeholder {
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
+  img {
+    cursor: pointer;
+  }
+}
+
+a {
+  cursor: pointer;
 }
 
 a:focus-visible {
@@ -174,7 +185,6 @@ a:focus-visible {
   color: white;
 }
 
-
 .footer-btn {
   background-color: white;
   border-radius: 50%;
@@ -183,6 +193,10 @@ a:focus-visible {
   display: flex;
   align-items: center;
   justify-content: center;
+
+  img {
+    cursor: pointer;
+  }
 }
 
 .btn {
@@ -252,6 +266,7 @@ a:focus-visible {
   .right-header {
     display: flex;
     justify-content: center;
+    cursor: pointer;
 
     gap: 1.5rem;
   }
@@ -262,6 +277,11 @@ a:focus-visible {
     display: flex;
     justify-content: space-between;
     padding-top: 1.5rem;
+  }
+  .logotype {
+    img {
+      cursor: pointer;
+    }
   }
 
   .nav-menu {
@@ -1049,6 +1069,10 @@ a:focus-visible {
     color: white;
   }
 
+  .description.expanded {
+    max-height: 1000px;
+  }
+
   .img-text {
     display: flex;
     color: white;
@@ -1082,6 +1106,13 @@ a:focus-visible {
     padding-top: 1rem;
     font-weight: 900;
     padding-bottom: 2rem;
+    border: none;
+    background-color: inherit;
+    cursor: pointer;
+  }
+
+  .read-more-text:focus-visible {
+    border: var(--clr-focus-blue) 5px solid;
   }
 }
 
@@ -1231,6 +1262,7 @@ a:focus-visible {
 
 .faq {
   padding-block: var(--section-spacing);
+  cursor: pointer;
 
   .container-space {
     display: flex;
@@ -1279,6 +1311,7 @@ a:focus-visible {
     width: 100%;
     border: none;
     background-color: transparent;
+    cursor: pointer;
   }
   .rotate {
     transform: rotate(180deg);
@@ -1289,5 +1322,9 @@ a:focus-visible {
     p {
       padding-block: 1rem;
     }
+  }
+
+  h6 {
+    cursor: pointer;
   }
 }
