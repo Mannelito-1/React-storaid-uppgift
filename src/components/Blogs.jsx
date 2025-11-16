@@ -21,41 +21,55 @@ function Blogs() {
 
   return (
     <>
-      <section className="blogs">
+      <section className="blogs" aria-labelledby="blogs-title">
         <div className="container-space">
           <div className="title">
             <Titlecomp
-              pText="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque molestie nisl sed dui lacinia gravida. Nulla quis nulla leo. Mauris ac blandit nisi non sodales augue. Phasellus eget elit gravida."
-              h4Title="Latest Blog and News"
               h3Title="Check Out Our Latest Blog and News Update"
+              h4Title="Latest Blog and News"
+              pText="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque molestie nisl sed dui lacinia gravida. Nulla quis nulla leo. Mauris ac blandit nisi non sodales augue. Phasellus eget elit gravida."
             />
           </div>
 
           <div className="blogs-div">
             {blogItems.map((item) => (
-              <Link to="/404" className="linkStyle" key={item.id}>
-                <div
+              <Link
+                onFocus={() => setOnHover(item.id)}
+                onBlur={() => setOnHover(null)}
+                to="/404"
+                className="linkStyle"
+                key={item.id}
+                aria-label={`Read blog : ${item.title}`}
+                
+              >
+                <article
                   className={`blog-card ${onHover === item.id ? "active" : ""}`}
                   onMouseEnter={() => setOnHover(item.id)}
                   onMouseLeave={() => setOnHover(null)}
-                  key={item.id}
+                  
                 >
                   <div className="img-container">
-                    <img src={item.imageUrl} />
+                    <img src={item.imageUrl} alt={item.title} />
                   </div>
 
                   <div className="img-text">
                     <img
                       className="calander-dark"
                       src="src/components/Images/calender-icon-dark.svg"
-                      alt=""
+                      alt="small Calender icon when hovered"
                     />
                     <img
                       className="calender-light"
                       src="src/components/Images/calender-icon.svg"
-                      alt=""
+                      alt="Small calander icon when not hovered"
                     />
-                    <p>{new Date(item.created).toLocaleString("en-US", { month: "long", day: "2-digit", year:"numeric"})}</p>
+                    <p>
+                      {new Date(item.created).toLocaleString("en-US", {
+                        month: "long",
+                        day: "2-digit",
+                        year: "numeric",
+                      })}
+                    </p>
                   </div>
                   {/* took help from chatgpt to convert item.created to display month day and year instead of just numbers. */}
 
@@ -65,9 +79,9 @@ function Blogs() {
                   </div>
 
                   <div className="read-more">
-                    <p className="read-more-btn">Read more →</p>
+                    <p className="read-more-text">Read more →</p>
                   </div>
-                </div>
+                </article>
               </Link>
             ))}
           </div>

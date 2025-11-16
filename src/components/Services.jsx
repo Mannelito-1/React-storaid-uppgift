@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 function Services() {
-  const [onHover,setOnHover] = useState(null)
+  const [onHover, setOnHover] = useState(null);
   return (
     <>
       <section className="services">
@@ -14,7 +14,6 @@ function Services() {
             <div className="top-text-small">
               <h3>Specialized Storage for Every Special Item</h3>
               <p>
-                
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
                 molestie nisl sed dui lacinia gravida. Nulla quis nulla leo.
                 Mauris ac blandit nisi non sodales augue. Phasellus eget elit
@@ -26,9 +25,11 @@ function Services() {
 
         <div className="container-space">
           <div className="services-grid">
-            <div className={`box1 ${onHover === "box1" ? "active" : ""}`}
+            <div
+              className={`box1 ${onHover === "box1" ? "active" : ""}`}
               onMouseEnter={() => setOnHover("box1")}
-              onMouseLeave={()=> setOnHover (null)}>
+              onMouseLeave={() => setOnHover(null)}
+            >
               <h4>Diverse Unit Sizes</h4>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
@@ -37,12 +38,17 @@ function Services() {
             </div>
 
             <div className="img-box">
-              <img src="src/components/Images/services-img1.svg" alt="" />
+              <img
+                src="src/components/Images/services-img1.svg"
+                alt="Empty image put your image here"
+              />
             </div>
 
-            <div className={`box2 ${onHover === "box2" ? "active" : ""}`}
+            <div
+              className={`box2 ${onHover === "box2" ? "active" : ""}`}
               onMouseEnter={() => setOnHover("box2")}
-              onMouseLeave={()=> setOnHover (null)}>
+              onMouseLeave={() => setOnHover(null)}
+            >
               <h4>Vehicle Storage</h4>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
@@ -50,9 +56,11 @@ function Services() {
               </p>
             </div>
 
-            <div className={`box3 ${onHover === "box3" ? "active" : ""}`}
+            <div
+              className={`box3 ${onHover === "box3" ? "active" : ""}`}
               onMouseEnter={() => setOnHover("box3")}
-              onMouseLeave={()=> setOnHover (null)}>
+              onMouseLeave={() => setOnHover(null)}
+            >
               <h4>Moving Assistance</h4>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
@@ -60,9 +68,11 @@ function Services() {
               </p>
             </div>
 
-            <div className={`box4 ${onHover === "box4" ? "active" : ""}`}
+            <div
+              className={`box4 ${onHover === "box4" ? "active" : ""}`}
               onMouseEnter={() => setOnHover("box4")}
-              onMouseLeave={()=> setOnHover (null)}>
+              onMouseLeave={() => setOnHover(null)}
+            >
               <h4>Top-Notch Security</h4>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit

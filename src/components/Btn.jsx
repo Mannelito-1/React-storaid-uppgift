@@ -1,15 +1,26 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
-function Btn({ btnText }) {
+function Btn({ btnText, to }) {
 
   const [onHover, setOnHover] = useState(null);
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    if (to) {
+      navigate(to);
+      
+    }
+  };
   
 
   return (
     <>
       <button className={`btn hero-btn ${onHover === btnText ? "active" : ""}`}
       onMouseEnter={() => setOnHover(btnText)}
-      onMouseLeave={() => setOnHover(null)}>{btnText}</button>
+      onMouseLeave={() => setOnHover(null)}
+      onClick={handleClick}>{btnText}</button>
+      
     </>
   );
 }

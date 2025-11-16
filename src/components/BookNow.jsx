@@ -19,7 +19,7 @@ function BookNow() {
             </p>
           </div>
           <div className="booknow-btn">
-            <Btn btnText="Book Now"/>
+            <Btn className="btn-interactive" btnText="Book Now" ariaLabel="Book a storage unit" to="/booking"/>
           </div>
         </div>
       </section>

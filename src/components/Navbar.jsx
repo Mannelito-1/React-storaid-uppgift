@@ -40,7 +40,7 @@ function Navbar() {
           </div>
 
           <div className="book-now">
-            <Btn  btnText="Booking" />
+            <Btn  btnText="Booking" to="/booking" />
           </div>
         </div>
       </nav>

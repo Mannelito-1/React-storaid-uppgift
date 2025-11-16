@@ -3,49 +3,49 @@ import { Link } from 'react-router-dom'
 function Header() {
   return (
     <>
-     <section className="header-top">
+     <header className="header-top" aria-label='Information top bar'>
       <div className="container">
         <div className="left-header">
           <div className="ph-header">
-            <img src="src/components/Images/ph-icon.svg" alt="" />
-            <p>+46 8 123 122 44</p>
+            <img src="src/components/Images/ph-icon.svg" alt="Phone icon" />
+            <a href="tel:+46812312244">+46 8 123 122 44</a>
           </div>
 
           <div className="mail-header">
-            <img src="src/components/Images/mail-icon.svg" alt="" />
-
-            <p>contact@domain.com</p>
+            <img src="src/components/Images/mail-icon.svg" alt="Email icon" />
+            <a href="mailto:contact@domain.com">contact@domain.com</a>
+           
           </div>
         </div>
 
-        <div className="right-header">
+        <div className="right-header" aria-label='social media links'>
           <div className="fb-header">
-            <Link className='header-btn' to="/">
-               <img src="src/components/Images/FB-icon.svg" alt="" />
+            <Link className='header-btn' to="/404" aria-label='Facebook'>
+               <img src="src/components/Images/FB-icon.svg" alt="Visit our Facebook" />
             </Link>
             
           </div>
 
-          <div className="twitter-header" to="/">
-            <Link className="header-btn">
-              <img src="src/components/Images/twitter-ico.svg" alt="" />
+          <div className="twitter-header">
+            <Link className="header-btn"  to="/404" aria-label='x'>
+              <img src="src/components/Images/twitter-ico.svg" alt="Visit our X" />
             </Link>
           </div>
 
           <div className="instagram-header">
-            <Link className="header-btn" to="/">
-              <img src="src/components/Images/instagram-icon.svg" alt="" />
+            <Link className="header-btn" to="/404" aria-label='Instagram'>
+              <img src="src/components/Images/instagram-icon.svg" alt="Visit our Instagram" />
             </Link>
           </div>
 
           <div className="youtube-icon">
-            <Link className="header-btn" to="/">
-              <img src="src/components/Images/youtube-icon.svg" alt="" />
+            <Link className="header-btn" to="/404" aria-label='Youtube'>
+              <img src="src/components/Images/youtube-icon.svg" alt="Visit our youtube" />
             </Link>
           </div>
         </div>
       </div>
-    </section>
+    </header>
     
     
     

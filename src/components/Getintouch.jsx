@@ -120,22 +120,26 @@ function Getintouch() {
               />
             </div>
             <div className="img-left">
-              <img src="src/components/Images/getintouch-img.svg" alt="" />
+              <img
+                src="src/components/Images/getintouch-img.svg"
+                alt="empty image add your image here"
+              />
             </div>
           </div>
 
           <div className="right-side">
             <form className="form-box" onSubmit={handleSubmit} noValidate>
               <div className="yourname">
-                <p className="form-p">
+                <label htmlFor="name" className="form-p">
                   Your name<span className="validation-star"> *</span>
-                </p>
+                </label>
                 <input
                   className={`yourname-input ${
                     errors.name ? "input-error" : ""
                   }`}
+                  id="name"
                   required
-                  type="name"
+                  type="text"
                   name="name"
                   value={formData.name}
                   onChange={handleChange}
@@ -148,13 +152,14 @@ function Getintouch() {
 
               <div className="email-tele">
                 <div className="email">
-                  <p className="form-p">
+                  <label htmlFor="email" className="form-p">
                     Email<span className="validation-star"> *</span>
-                  </p>
+                  </label>
                   <input
                     className={`email-input ${
                       errors.email ? "input-error" : ""
                     }`}
+                    id="email"
                     type="email"
                     name="email"
                     value={formData.email}
@@ -168,11 +173,14 @@ function Getintouch() {
                 </div>
 
                 <div className="tele">
-                  <p className="form-p">Telephone</p>
+                  <label htmlFor="telephone" className="form-p">
+                    Telephone
+                  </label>
                   <input
                     className={`tele-input ${
                       errors.telephone ? "input-error" : ""
                     }`}
+                    id="telephone"
                     type="tel"
                     name="telephone"
                     value={formData.telephone}
@@ -189,14 +197,15 @@ function Getintouch() {
               </div>
 
               <div className="subject">
-                <p className="form-p">
+                <label htmlFor="subject" className="form-p">
                   Subjecet<span className="validation-star"> *</span>
-                </p>
+                </label>
                 <input
                   className={`subject-input ${
                     errors.subject ? "input-error" : ""
                   }`}
-                  type="subject"
+                  id="subject"
+                  type="text"
                   name="subject"
                   value={formData.subject}
                   onChange={handleChange}
@@ -209,14 +218,15 @@ function Getintouch() {
               </div>
 
               <div className="comments">
-                <p className="form-p">
+                <label htmlFor="comments" className="form-p">
                   Comments / Questions
                   <span className="validation-star"> *</span>
-                </p>
+                </label>
                 <textarea
                   className={`comments-input ${
                     errors.comments ? "input-error" : ""
                   }`}
+                  id="comments"
                   name="comments"
                   value={formData.comments}
                   onChange={handleChange}
@@ -228,7 +238,9 @@ function Getintouch() {
                 )}
               </div>
               {validSubmit && (
-                <p className="valid-submit">Thank you for your Question</p>
+                <p className="valid-submit" role="status">
+                  Thank you for your Question
+                </p>
               )}
 
               <Btn className="btn" type="submit" btnText="Submit" />

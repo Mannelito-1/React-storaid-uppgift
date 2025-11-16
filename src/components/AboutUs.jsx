@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Btn from "./Btn";
 
 function AboutUs() {
   const [onHover, setOnHover] = useState(null);
@@ -8,7 +9,7 @@ function AboutUs() {
       <section className="about-us">
         <div className="container-space">
           <div className="about-us-left">
-            <img src="src/components/Images/about-us-img.svg" alt="" />
+            <img src="src/components/Images/about-us-img.svg" alt="empty img" />
             <div className="img-bar">
               <div className="img-number">
                 <h2>12+</h2>
@@ -44,6 +45,8 @@ function AboutUs() {
                 className={`hover ${onHover === "vision" ? "active" : ""}`}
                 onMouseEnter={() => setOnHover("vision")}
                 onMouseLeave={() => setOnHover(null)}
+                
+                
               >
                 <h5>Vision</h5>
                 <p className="hover-p">
@@ -56,6 +59,8 @@ function AboutUs() {
                 className={`hover ${onHover === "mission" ? "active" : ""}`}
                 onMouseEnter={() => setOnHover("mission")}
                 onMouseLeave={() => setOnHover(null)}
+               
+                
               >
                 <h5>Mission</h5>
                 <p>
@@ -66,13 +71,11 @@ function AboutUs() {
             </div>
             <div className="about-us-lower">
               <div className="btn-lower">
-                <button className={`btn ${onHover === "discover more" ? "active" : ""}`}
-                onMouseEnter={() => setOnHover("discover more")}
-                onMouseLeave={() => setOnHover(null)}>Discover More</button>
+               <Btn btnText="Discover more" to="/services"/>
               </div>
 
               <div className="img-icon">
-                <img src="src/components/Images/about-us-ph.svg" alt="" />
+                <img src="src/components/Images/about-us-ph.svg" alt="phone icon" />
               </div>
               <div className="icon-text">
                 <h5>More Information</h5>

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 
 function Testimonial() {
+  const [onHover, setOnHover] = useState(null);
   const [testimonialItems, setTestimonialItems] = useState([]);
 
   const fetchData = async () => {
@@ -31,7 +32,14 @@ function Testimonial() {
 
           <div className="testimonialsdiv">
             {testimonialItems.map((item) => (
-              <div key={item.id} className="testimonial-card">
+              <div
+                key={item.id}
+                className={`testimonial-card ${
+                  onHover === item.id ? "active" : ""
+                }`}
+                onMouseEnter={() => setOnHover(item.id)}
+                onMouseLeave={() => setOnHover(null)}
+              >
                 <div className="testimonial-stars">
                   <p className="stars">{"★".repeat(item.rating)}</p>
                 </div>
@@ -41,7 +49,11 @@ function Testimonial() {
 
                 <div className="profile">
                   <div className="img-container">
-                    <img  className="proflie-pic"src={item.avatarUrl} alt="" />
+                    <img
+                      className="proflie-pic"
+                      src={item.avatarUrl}
+                      alt="Profile pictures"
+                    />
                   </div>
 
                   <div className="proflie-text">
@@ -52,7 +64,7 @@ function Testimonial() {
                   <div className="icon">
                     <img
                       src="src/components/Images/testimonials-icon.svg"
-                      alt=""
+                      alt="Quotes"
                     />
                   </div>
                 </div>
@@ -61,7 +73,6 @@ function Testimonial() {
           </div>
         </div>
       </section>
-      
     </>
   );
 }

@@ -13,12 +13,14 @@ function ChooseUs() {
 "
           h4Title="Why Choose Us"
         />
-
         <div className="container-space">
           <div className="chooseus-left">
             <div className="infoBox1">
               <div className="img-box1">
-                <img src="src/components/Images/lock-icon.svg" alt="" />
+                <img
+                  src="src/components/Images/lock-icon.svg"
+                  alt="Lock icon"
+                />
               </div>
 
               <div className="infoBox1Text">
@@ -33,11 +35,14 @@ function ChooseUs() {
 
             <div className="infoBox1">
               <div className="img-box1">
-                <img src="src/components/Images/Money-bag.svg" alt="" />
+                <img
+                  src="src/components/Images/Money-bag.svg"
+                  alt="money icon"
+                />
               </div>
 
               <div className="infoBox1Text">
-                <h5>Security and Safety</h5>
+                <h5>Flexible and Affordable</h5>
                 <p>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
                   elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus
@@ -48,11 +53,14 @@ function ChooseUs() {
 
             <div className="infoBox1">
               <div className="img-box1">
-                <img src="src/components/Images/broom-icon.svg" alt="" />
+                <img
+                  src="src/components/Images/broom-icon.svg"
+                  alt="Broom icon"
+                />
               </div>
 
               <div className="infoBox1Text">
-                <h5>Security and Safety</h5>
+                <h5>Clean and Well-Maintained Facilities</h5>
                 <p>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
                   elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus
@@ -63,11 +71,14 @@ function ChooseUs() {
 
             <div className="infoBox1">
               <div className="img-box1">
-                <img src="src/components/Images/clock-icon.svg" alt="" />
+                <img
+                  src="src/components/Images/clock-icon.svg"
+                  alt="Clock icon"
+                />
               </div>
 
               <div className="infoBox1Text">
-                <h5>Security and Safety</h5>
+                <h5>24/7 and Convenient Access</h5>
                 <p>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
                   elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus

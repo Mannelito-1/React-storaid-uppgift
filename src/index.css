@@ -8,7 +8,7 @@
   --hover-btn-bg: #ececec62;
   --clr-light-yellow: #faf8ec;
   --clr-blog-card-light: #f1ffea;
-  --clr-focus-blue:#69acff;
+  --clr-focus-blue: #69acff;
 
   --section-spacing: 4rem;
 }
@@ -52,6 +52,11 @@ h6 {
   color: var(--clr-dark-green);
   font-size: 20px;
   font-weight: 600;
+}
+
+a {
+  text-decoration: none;
+  color: white;
 }
 
 .linkStyle {
@@ -163,6 +168,13 @@ a:focus-visible {
   outline: var(--clr-focus-blue) 3px solid;
 }
 
+.btn:focus {
+  outline: var(--clr-focus-blue) 5px solid;
+  background-color: var(--clr-dark-green);
+  color: white;
+}
+
+
 .footer-btn {
   background-color: white;
   border-radius: 50%;
@@ -229,7 +241,7 @@ a:focus-visible {
 
     gap: 3rem;
 
-    p {
+    a {
       display: inline;
       padding-left: 0.5rem;
       font-size: 16px;
@@ -302,6 +314,10 @@ a:focus-visible {
     margin-top: 2rem;
     width: 9.3rem;
   }
+  .btn.active {
+    color: var(--clr-dark-green);
+    background-color: white;
+  }
 }
 
 .about-us {
@@ -358,6 +374,10 @@ a:focus-visible {
     transition: all 0.3s ease;
   }
 
+  .btn:focus {
+    background-color: var(--clr-dark-green);
+  }
+
   .hover-about-us {
     display: flex;
     height: 156px;
@@ -367,7 +387,7 @@ a:focus-visible {
     gap: 1rem;
   }
   .hover {
-    border: 2px solid transparent;
+    border: 4px solid transparent;
 
     padding-top: 1.5rem;
     padding-left: 1rem;
@@ -654,7 +674,7 @@ a:focus-visible {
 
 .booknow {
   padding-block: var(--section-spacing);
-  background-color: var(--clr-dark-green);
+  background-color: var(--clr-light-green);
   .container-space {
     display: flex;
     flex-direction: column;
@@ -978,7 +998,7 @@ a:focus-visible {
     background-color: var(--clr-dark-green);
     width: 430px;
     border-radius: 1%;
-    color: white;
+    color: rgb(255, 255, 255);
   }
 
   .blog-card.active {
@@ -1003,6 +1023,10 @@ a:focus-visible {
     }
 
     .description {
+      color: var(--clr-dark-green);
+    }
+
+    p {
       color: var(--clr-dark-green);
     }
   }
@@ -1051,12 +1075,12 @@ a:focus-visible {
     }
   }
 
-  .read-more-btn {
+  .read-more-text {
     display: flex;
     padding-left: 1.5rem;
     color: var(--clr-yellow);
     padding-top: 1rem;
-
+    font-weight: 900;
     padding-bottom: 2rem;
   }
 }
@@ -1104,6 +1128,10 @@ a:focus-visible {
     padding-bottom: 2rem;
     padding-top: 2rem;
     border-radius: 2%;
+  }
+
+  .testimonial-card.active {
+    outline: var(--clr-yellow) 5px solid;
   }
 
   .card-text {
@@ -1245,6 +1273,10 @@ a:focus-visible {
   }
 
   .arrow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
     border: none;
     background-color: transparent;
   }

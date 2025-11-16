@@ -8,8 +8,9 @@ function Pricing() {
     <>
       <section className="pricing">
         <Titlecomp
-          h4Title="Pricing Plan"
           h3Title="Find the Perfect Plan for Your Storage Needs"
+          h4Title="Pricing Plan"
+          
         />
         <div className="container-space">
           <div
@@ -51,7 +52,7 @@ function Pricing() {
               <p>Nam nec ipsum in dolor</p>
             </div>
             <div className="pricing-btn">
-              <Btn btnText="Rent now" />
+              <Btn btnText="Rent now"  to="/booking" />
             </div>
           </div>
           <div
@@ -93,7 +94,7 @@ function Pricing() {
               <p>Nam nec ipsum in dolor</p>
             </div>
             <div className="pricing-btn">
-              <Btn btnText="Rent now" />
+              <Btn btnText="Rent now"  to="/booking" />
             </div>
           </div>
           <div
@@ -135,7 +136,7 @@ function Pricing() {
               <p>Nam nec ipsum in dolor</p>
             </div>
             <div className="pricing-btn">
-              <Btn btnText="Rent now" />
+              <Btn btnText="Rent now" to="/booking"/>
             </div>
           </div>
           <div
@@ -177,7 +178,7 @@ function Pricing() {
               <p>Nam nec ipsum in dolor</p>
             </div>
             <div className="pricing-btn">
-              <Btn btnText="Rent now" />
+              <Btn btnText="Rent now"  to="/booking" />
             </div>
           </div>
         </div>

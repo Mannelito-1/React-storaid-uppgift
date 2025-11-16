@@ -26,7 +26,7 @@ function Faq() {
   }, []);
   return (
     <>
-      <section className="faq">
+      <section className="faq" aria-label="Faq-title">
         <div className="container-space">
           <div className="left-side">
             <Titlecomp
@@ -42,12 +42,18 @@ function Faq() {
                 <div key={index} className="card">
                   <div
                     className={` card-head ${
-                      openIndex === index ? `active, card-bg` : ""
+                      openIndex === index ? `active card-bg` : ""
                     }`}
-                    onClick={() => toggleAccordion(index)}
                   >
-                    <h6>{item.title}</h6>
-                    <button className="arrow">
+                    <button
+                      id={`faq-header-${index}`}
+                      className="arrow"
+                      onClick={() => toggleAccordion(index)}
+                      aria-controls={`faq-panel-${index}`}
+                      aria-expanded={openIndex === index}
+                    >
+                      {" "}
+                      <h6>{item.title}</h6>
                       <FontAwesomeIcon
                         icon={faChevronDown}
                         className={openIndex === index ? "rotate" : ""}
@@ -58,6 +64,9 @@ function Faq() {
                     className={` card-hidden ${
                       openIndex === index ? `active` : ""
                     }`}
+                    id={`faq-panel-${index}`}
+                    role="region"
+                    aria-labelledby={`faq-header-${index}`}
                   >
                     {openIndex === index && <p>{item.description}</p>}
                   </div>
