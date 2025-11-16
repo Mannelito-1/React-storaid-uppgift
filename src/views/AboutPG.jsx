@@ -9,7 +9,7 @@ function AboutPG() {
   return (
     <>
       <Althero
-        heroText="About"
+        heroText="About us"
         heroPtext="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo."
       />
       <AboutUs/>

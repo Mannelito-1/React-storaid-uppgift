@@ -13,7 +13,7 @@ function Pagenotfound() {
               Sorry, the page you are looking for does not exist. It may have
               been moved, removed altogether or is temporarily unavailable.
             </p>
-            <Btn btnText="Back To Home"/>
+            <Btn to="/" btnText="Back To Home"/>
           </div>
         </div>
       </section>
