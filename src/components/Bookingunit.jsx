@@ -25,7 +25,7 @@ function Bookingunit() {
       error = "Must be a valid email (eg. name@domain.com)";
     } else if (name === "unit" && !/^[A-Za-zÅÄÖåäö\s0-9]{2,}$/.test(value)) {
       error = "Must contain at least 2 characters";
-    } else if (name === "storage" && !/^[A-Za-zÅÄÖåäö\s0-9]{2,}$/.test(value)) {
+    } else if (name === "storage" && !/^[A-Za-zÅÄÖåäö0-9\s.,!?'"():;\-]{2,}$/.test(value)) {
       error = "Must contain at least 2 characters";
     }
 
@@ -46,7 +46,7 @@ function Bookingunit() {
     if (!/^[A-Za-zÅÄÖåäö\s0-9]{2,}$/.test(formData.unit))
       newErrors.unit = "Must contain at least 2 characters";
 
-    if (!/^[A-Za-zÅÄÖåäö\s0-9]{2,}$/.test(formData.storage))
+    if (!/^[A-Za-zÅÄÖåäö0-9\s.,!?'"():;\-]{2,}$/.test(formData.storage))
       newErrors.storage = "Must contain at least 2 characters";
 
     setErrors(newErrors);

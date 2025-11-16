@@ -31,7 +31,7 @@ function Getintouch() {
       
     }
 
-    else if (name === 'comments' && !/^[A-Za-zÅÄÖåäö\s0-9]{2,}$/.test(value)) { 
+    else if (name === 'comments' && !/^[A-Za-zÅÄÖåäö0-9\s.,!?'"():;\-]{2,}$$/.test(value)) { 
       error ="Must contain at least 2 characters"
       
     }
@@ -54,11 +54,11 @@ function Getintouch() {
       newErrors.email ="Must be a valid email (eg. name@domain.com) "
 
 
-    if  (!/^[A-Za-zÅÄÖåäö\s0-9]{2,}$/.test(formData.subject))
+    if  (!/^[A-Za-zÅÄÖåäö0-9\s.,!?'"():;\-]{2,}$/.test(formData.subject))
       newErrors.subject ="Must contain at least 2 characters"
 
 
-     if  (!/^[A-Za-zÅÄÖåäö\s0-9]{2,}$/.test(formData.comments))
+     if  (!/^[A-Za-zÅÄÖåäö0-9\s.,!?'"():;\-]{2,}$/.test(formData.comments))
       newErrors.comments ="Must contain at least 2 characters"
 
 
