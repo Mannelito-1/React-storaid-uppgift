@@ -8,27 +8,27 @@ function Subscribe() {
   });
 
   const [errors, setErrors] = useState({});
-  const [valids, setValids] = useState("");
+  const [validSubmit, setValidSubmit] = useState(false);
   const location = useLocation();
 
   // Took help from chatgpt for useLocation
   useEffect(() => {
     setFormData({ email: "" });
     setErrors({});
-    setValids("");
+    setValidSubmit(false);
   }, [location.pathname]);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
-
-    setValids("");
   };
 
   const validateForm = () => {
     const newErrors = {};
 
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
+    if (
+      !/^[A-Za-z0-9._-]+@[A-Za-z0-9.-]+\.[A-Za-z0-9]{2,}$/.test(formData.email)
+    ) {
       newErrors.email = " Please enter a valid email example: name@email.com";
     }
 
@@ -38,8 +38,9 @@ function Subscribe() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if (!validateForm()) return;
-    try {
+
+    if (validateForm()) {
+      console.log("valid");
       const res = await fetch(
         "https://win25-jsf-assignment.azurewebsites.net/api/subscribe",
         {
@@ -47,15 +48,21 @@ function Subscribe() {
           headers: {
             "Content-Type": "application/json",
           },
-          body: JSON.stringify(formData),
+          body: JSON.stringify({
+            email: formData.email,
+          }),
         }
       );
 
-      setFormData({ email: "" });
-      setErrors({});
-      setValids("Thanks for subscribing.");
-    } catch {
-      console.error("something went wrong");
+      if (res.ok) {
+        setFormData({
+          email: "",
+        });
+        setValidSubmit(true);
+        setTimeout(() => setValidSubmit(false), 3000);
+      }
+    } else {
+      console.log("not working");
     }
   };
 
@@ -85,7 +92,11 @@ function Subscribe() {
                 {errors.email && (
                   <span className="validation-error">{errors.email} </span>
                 )}
-                {valids && <span className="success">{valids}</span>}
+                {validSubmit && (
+                  <span className="valid-submit">
+                    Thanks for your subscription
+                  </span>
+                )}
                 <div className="submit-btn">
                   <Btn type="submit" btnText="Submit" />
                 </div>

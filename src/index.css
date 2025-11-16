@@ -664,6 +664,7 @@ textarea::placeholder {
 }
 
 .subscribe {
+  position: relative;
   padding-block: var(--section-spacing);
   background-color: var(--clr-light-yellow);
 
@@ -679,13 +680,6 @@ textarea::placeholder {
   }
 
   .validation-error {
-    display: flex;
-    position: absolute;
-    top: 4rem;
-    left: 1rem;
-    font-weight: 900;
-  }
-  .success {
     display: flex;
     position: absolute;
     top: 4rem;
@@ -714,6 +708,11 @@ textarea::placeholder {
     display: flex;
     padding-left: 1rem;
     flex-direction: column;
+  }
+
+  .valid-submit {
+    position: absolute;
+    top: 4rem;
   }
 }
 
