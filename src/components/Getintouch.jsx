@@ -90,7 +90,7 @@ function Getintouch() {
           }),
         }
       );
-
+      console.log("HTTP status:", res.status);
       if (res.ok) {
         setFormData({
           name: "",
@@ -103,7 +103,8 @@ function Getintouch() {
         setTimeout(() => setValidSubmit(false), 3000);
       }
     } else {
-      console.log("not working");
+      console.log("something went wrong")
+
     }
   };
 

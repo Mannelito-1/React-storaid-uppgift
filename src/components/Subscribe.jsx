@@ -29,7 +29,7 @@ function Subscribe() {
     if (
       !/^[A-Za-z0-9._-]+@[A-Za-z0-9.-]+\.[A-Za-z0-9]{2,}$/.test(formData.email)
     ) {
-      newErrors.email = " Please enter a valid email example: name@email.com";
+      newErrors.email = " Must be a valid email (eg. name@domain.com)";
     }
 
     setErrors(newErrors);
@@ -53,6 +53,7 @@ function Subscribe() {
           }),
         }
       );
+      console.log("HTTP status:", res.status);
 
       if (res.ok) {
         setFormData({
@@ -62,7 +63,8 @@ function Subscribe() {
         setTimeout(() => setValidSubmit(false), 3000);
       }
     } else {
-      console.log("not working");
+      console.log("not a valid email")
+
     }
   };
 

@@ -80,6 +80,7 @@ function Bookingunit() {
           }),
         }
       );
+      console.log("HTTP status:", res.status);
 
       if (res.ok) {
         setFormData({
@@ -92,7 +93,7 @@ function Bookingunit() {
         setTimeout(() => setValidSubmit(false), 3000);
       }
     } else {
-      console.log("not working");
+      console.log("not a valid submit")
     }
   };
 

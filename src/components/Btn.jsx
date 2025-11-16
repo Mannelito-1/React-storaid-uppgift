@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-function Btn({ btnText, to }) {
+function Btn({ btnText, to, type = "button" }) {
 
   const [onHover, setOnHover] = useState(null);
   const navigate = useNavigate();
@@ -16,7 +16,9 @@ function Btn({ btnText, to }) {
 
   return (
     <>
-      <button className={`btn hero-btn ${onHover === btnText ? "active" : ""}`}
+      <button
+      type={type}
+      className={`btn hero-btn ${onHover === btnText ? "active" : ""}`}
       onMouseEnter={() => setOnHover(btnText)}
       onMouseLeave={() => setOnHover(null)}
       onClick={handleClick}>{btnText}</button>
